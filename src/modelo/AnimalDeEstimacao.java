@@ -49,6 +49,7 @@ public class AnimalDeEstimacao extends Individuo {
 		this.especie = especie;
 	} 
 
+
     public Raca getRaca() {
 		return raca;
 	}
