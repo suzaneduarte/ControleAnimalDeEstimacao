@@ -1,5 +1,7 @@
 package model;
 
+import enumerate.Intervalo;
+
 import java.util.Date;
 
 public class Vacina {
@@ -11,6 +13,17 @@ public class Vacina {
 	private int periodo;
 	private Intervalo intervalo;
     
+	public Vacina(String nomeDaVacina, Date data, String lote, String laboratorio, boolean necessitaRevacina, int periodo, Intervalo intervalo) {
+		this.nomeDaVacina = nomeDaVacina;
+		this.data = data;
+		this.lote = lote;
+		this.laboratorio = laboratorio;
+		this.necessitaRevacina = necessitaRevacina;
+		this.periodo = periodo;
+		this.intervalo = intervalo;
+
+	}
+
 
 	// getters and setters
 	public String getNomeDaVacina() {

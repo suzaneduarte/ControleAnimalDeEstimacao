@@ -6,6 +6,14 @@ public class Usuario extends Individuo {
     private String telefone;
 	
 
+	public Usuario(String email, String cpf, String telefone, String nome, Date nascimento, Sexo sexo) {
+			super(nome, nascimento, sexo);
+			this.email = email;
+			this.cpf = cpf;
+			this.telefone = telefone;
+	}
+
+
     // getters and setters
 	public String getNome() {
 		return nome;

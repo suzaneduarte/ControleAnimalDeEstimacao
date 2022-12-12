@@ -1,11 +1,20 @@
 package model;
 
+import enumerate.Sexo;
+
 import java.util.Date;
 
 public abstract class Individuo {
 	private String nome;
 	private Date nascimento;
 	private Sexo sexo;
+
+
+	public Individuo(String nome, Date nascimento, Sexo sexo) {
+			this.nome = nome;
+			this.nascimento = nascimento;
+			this.sexo = sexo;
+	}
 
 
 	// getters and setters

@@ -1,8 +1,16 @@
 package model;
 
+import enumerate.Especie;
+
 public class AnimalDeEstimacao extends Individuo { 
-	private String especie;
+	private Especie especie;
 	private Raca raca;
+
+	public AnimalDeEstimacao(Especie especie, Raca raca, String nome, Date nascimento, Sexo sexo) {
+		super(nome, nascimento, sexo);
+		this.especie = especie;
+		this.raca = raca;
+	}
 
 
     // getters and setters
@@ -41,5 +49,11 @@ public class AnimalDeEstimacao extends Individuo {
 		this.especie = especie;
 	} 
 
-    raca? 
+    public Raca getRaca() {
+		return raca;
+	}
+
+	public void setRaca(Raca raca) {
+		this.raca = raca;
+	}  
 }

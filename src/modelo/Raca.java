@@ -8,6 +8,15 @@ public class Raca {
 	private String temperamento;
 	
 
+	public Raca(String tipoDeRaca, String pelagem, boolean tamanhoDaPelagem, float peso, String temperamento) {
+		this.tipoDeRaca = tipoDeRaca;
+		this.pelagem = pelagem;
+		this.tamanhoDaPelagem = tamanhoDaPelagem;
+		this.peso = peso;
+		this.temperamento = temperamento;
+	}
+
+
     // getters and setters
 	public String getTipoDeRaca() {
 		return tipoDeRaca;
