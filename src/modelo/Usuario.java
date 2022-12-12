@@ -3,7 +3,7 @@ package model;
 public class Usuario extends Individuo { 
 	private String email;
 	private String cpf;
-    private String telefone;
+	private String telefone;
 	
 
 	public Usuario(String email, String cpf, String telefone, String nome, Date nascimento, Sexo sexo) {
