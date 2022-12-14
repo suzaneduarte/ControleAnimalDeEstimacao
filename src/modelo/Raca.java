@@ -1,14 +1,14 @@
-package model;
+package modelo;
 
 public class Raca {
 	private String tipoDeRaca;
 	private String pelagem;
 	private boolean tamanhoDaPelagem;
-	private float peso;
+	private double peso;
 	private String temperamento;
 	
 
-	public Raca(String tipoDeRaca, String pelagem, boolean tamanhoDaPelagem, float peso, String temperamento) {
+	public Raca(String tipoDeRaca, String pelagem, boolean tamanhoDaPelagem, double peso, String temperamento) {
 		this.tipoDeRaca = tipoDeRaca;
 		this.pelagem = pelagem;
 		this.tamanhoDaPelagem = tamanhoDaPelagem;
@@ -45,11 +45,11 @@ public class Raca {
 	}
 
 	
-	public float getPeso() {
+	public double getPeso() {
 		return peso;
 	}
 
-	public void setPeso(float peso) {
+	public void setPeso(double peso) {
 		this.peso = peso;
 	}
 

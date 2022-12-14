@@ -1,6 +1,8 @@
-package model;
+package modelo;
 
+import java.util.Date;
 import enumerate.Especie;
+import enumerate.Sexo;
 
 public class AnimalDeEstimacao extends Individuo { 
 	private Especie especie;
@@ -10,34 +12,6 @@ public class AnimalDeEstimacao extends Individuo {
 		super(nome, nascimento, sexo);
 		this.especie = especie;
 		this.raca = raca;
-	}
-
-
-    // getters and setters
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-
-	public Date getNascimento() {
-		return nascimento;
-	}
-
-	public void setNascimento(Date nascimento) {
-		this.nascimento = nascimento;
-	}
-
-
-	public Sexo getSexo() {
-		return sexo;
-	}
-
-	public void setSexo(Sexo sexo) {
-		this.sexo = sexo;
 	}
 	
 

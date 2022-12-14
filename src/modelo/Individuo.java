@@ -1,4 +1,4 @@
-package model;
+package modelo;
 
 import enumerate.Sexo;
 
@@ -40,7 +40,7 @@ public abstract class Individuo {
 		return sexo;
 	}
 
-	public Sexo setSexo(Sexo sexo) {
+	public void setSexo(Sexo sexo) {
 		this.sexo = sexo;
 	}
 

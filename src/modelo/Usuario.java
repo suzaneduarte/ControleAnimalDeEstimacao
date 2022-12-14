@@ -1,4 +1,7 @@
-package model;
+package modelo;
+
+import java.util.Date;
+import enumerate.Sexo;
 
 public class Usuario extends Individuo { 
 	private String email;
@@ -14,34 +17,7 @@ public class Usuario extends Individuo {
 	}
 
 
-    // getters and setters
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-
-	public Date getNascimento() {
-		return nascimento;
-	}
-
-	public void setNascimento(Date nascimento) {
-		this.nascimento = nascimento;
-	}
-
-
-	public Sexo getSexo() {
-		return sexo;
-	}
-
-	public void setSexo(Sexo sexo) {
-		this.sexo = sexo;
-	}
-	
-
+    // getters and setters	
     public String getEmail() {
 		return email;
 	}
