@@ -61,5 +61,17 @@ public class Raca {
 	public void setTemperamento(String temperamento) {
 		this.temperamento = temperamento;
 	}
-	
+
+	public String toString() {
+		StringBuilder stringb = new StringBuilder();
+		stringb.append("Raça: \n");
+		stringb.append("Raça do animal: "+ tipoDeRaca + "\n");
+		stringb.append("Pelagem: " + pelagem + "\n");
+		stringb.append("Tamanho da pelagem: "+ tamanhoDaPelagem + "\n");
+		stringb.append("Peso: " + peso + "\n");
+		stringb.append("Temperamento: "+ temperamento + "\n");
+		
+		return stringb.toString();
+	}
+
 }

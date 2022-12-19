@@ -7,6 +7,7 @@ public class Usuario extends Individuo {
 	private String email;
 	private String cpf;
 	private String telefone;
+
 	
 
 	public Usuario(String email, String cpf, String telefone, String nome, Date nascimento, Sexo sexo) {
@@ -43,4 +44,18 @@ public class Usuario extends Individuo {
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
+
+	public String toString() {
+		StringBuilder stringb = new StringBuilder();
+		stringb.append("Usuário: \n");
+		stringb.append("Nome: "+ this.getNome() + "\n");
+		stringb.append("Email: " + email + "\n");
+		stringb.append("CPF: "+ cpf + "\n");
+		stringb.append("telefone: " + telefone + "\n");
+		stringb.append("Sexo: "+ this.getSexo() + "\n");
+		stringb.append("Nascimento: "+ this.getNascimento() + "\n");
+		
+		return stringb.toString();
+	}
+
 }
