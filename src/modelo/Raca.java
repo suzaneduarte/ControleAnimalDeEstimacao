@@ -64,8 +64,7 @@ public class Raca {
 
 	public String toString() {
 		StringBuilder stringb = new StringBuilder();
-		stringb.append("Raça: \n");
-		stringb.append("Raça do animal: "+ tipoDeRaca + "\n");
+		stringb.append(tipoDeRaca + "\n");
 		stringb.append("Pelagem: " + pelagem + "\n");
 		stringb.append("Tamanho da pelagem: "+ tamanhoDaPelagem + "\n");
 		stringb.append("Peso: " + peso + "\n");

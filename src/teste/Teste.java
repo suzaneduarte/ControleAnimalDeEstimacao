@@ -4,13 +4,10 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 import enumerate.Especie;
-import enumerate.Intervalo;
 import enumerate.Sexo;
 import modelo.AnimalDeEstimacao;
-import modelo.Individuo;
 import modelo.Raca;
 import modelo.Usuario;
-import modelo.Vacina;
 
 public class Teste {
 
