@@ -38,7 +38,7 @@ public class QuadroCadastro implements ActionListener {
 	}
 	
 	private void construirTitulo(JFrame janela) {
-		JLabel titulo = new JLabel("Tela de Cadastro");
+		JLabel titulo = new JLabel("Cadastro");
 		
 		titulo.setBounds(bordaX + 50, bordaY, 400, 90); 
 		titulo.setFont(new Font("Arial", Font.BOLD, 35));
