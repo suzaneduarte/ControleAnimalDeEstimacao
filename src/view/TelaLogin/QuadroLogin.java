@@ -1,18 +1,17 @@
-package view.PrimeiraTela;
+package view.TelaLogin;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import view.TelaCadastro.*;
 
-import java.awt.image.BufferedImage;
-import java.io.File;
-import javax.imageio.ImageIO;
-import java.io.IOException;
+//import java.awt.image.BufferedImage;
+//import java.io.File;
+//import javax.imageio.ImageIO;
+//import java.io.IOException;
 
 public class QuadroLogin implements ActionListener {
 	private JFrame janela;
-	private JPanel fundo;
 	
 	private int bordaX = 24;
 	private int bordaY = 24;
@@ -32,7 +31,6 @@ public class QuadroLogin implements ActionListener {
 	}
 	
 	public void construir() {
-//		construirFundo(janela);
 		construirTitulo(janela);
 		construirFormulario(janela);
 		construirBotoes(janela);

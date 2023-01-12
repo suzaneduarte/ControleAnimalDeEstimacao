@@ -1,13 +1,13 @@
-package view.PrimeiraTela;
+package view.TelaLogin;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-import java.awt.image.BufferedImage;
-import java.io.File;
-import javax.imageio.ImageIO;
-import java.io.IOException;
+//import java.awt.image.BufferedImage;
+//import java.io.File;
+//import javax.imageio.ImageIO;
+//import java.io.IOException;
 
 public class FormularioLogin implements ActionListener {
 	JFrame janela;
