@@ -68,14 +68,4 @@ public class QuadroLogin implements ActionListener {
 		janela.add(botaoEntrar);
 		janela.add(botaoCadastrar);
 	}
-//	
-//	private void construirFundo(JFrame janela) {
-//		fundo = new JPanel();
-//		fundo.setLayout(new BoxLayout(fundo, BoxLayout.Y_AXIS));
-//		fundo.setBackground(Color.orange);
-//		
-//		fundo.setBounds(650,380,400,400); 
-//		
-//		janela.add(fundo);
-//	}
 }

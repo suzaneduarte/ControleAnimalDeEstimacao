@@ -34,7 +34,7 @@ public class QuadroCadastro implements ActionListener {
 //		construirFundo(janela);
 		construirTitulo(janela);
 		construirFormulario(janela);
-		construirBotao(janela);
+		construirBotoes(janela);
 	}
 	
 	private void construirTitulo(JFrame janela) {
@@ -52,7 +52,7 @@ public class QuadroCadastro implements ActionListener {
 		formularioCadastro.construir();
 	}
 	
-	private void construirBotao(JFrame janela) {
+	private void construirBotoes(JFrame janela) {
 		JButton botaoCadastrar = new JButton("Cadastrar");
 		
 		botaoCadastrar.setBounds(bordaX + 140, bordaY + 378, 120, 20);
@@ -60,15 +60,6 @@ public class QuadroCadastro implements ActionListener {
 		botaoCadastrar.addActionListener(this);
 		
 		janela.add(botaoCadastrar);
+		
 	}
-//	
-//	private void construirFundo(JFrame janela) {
-//		fundo = new JPanel();
-//		fundo.setLayout(new BoxLayout(fundo, BoxLayout.Y_AXIS));
-//		fundo.setBackground(Color.orange);
-//		
-//		fundo.setBounds(650,380,400,400); 
-//		
-//		janela.add(fundo);
-//	}
 }
