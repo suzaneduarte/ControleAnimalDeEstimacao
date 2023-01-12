@@ -35,15 +35,6 @@ public class PrimeiraTela implements ActionListener {
 	
 	// Trata eventos de ação 
 	public void actionPerformed(ActionEvent ae) {
-		if ("entrar" == ae.getActionCommand()) 
-		{
-	        new MeusPets();
-	        janelainicial.dispose();
-	        
-	    } else if("cadastrar" == ae.getActionCommand()) {
-	        new TelaCadastro();
-	        janelainicial.dispose();
-	    }
 		
 	}
 	

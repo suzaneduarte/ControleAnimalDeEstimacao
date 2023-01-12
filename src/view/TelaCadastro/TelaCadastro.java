@@ -37,20 +37,6 @@ import view.TelaLogin.PrimeiraTela;
 		//trata eventos de ação 
 		public void actionPerformed(ActionEvent ae) {
 
-//			if(ae.getActionCommand().equals("Entrar")) //se o botão entrar for pressionado 
-//			{
-//				String orgStr = entrar.getText();
-//				String resString = "";
-	//
-//				for(int i = orgStr.lengt()-1; i>= 0; i--) //armazena string invertida
-//					resString += orgStr.charAt(i);
-	//
-//				entrar.setText(resString);
-//			}else
-//			{
-//				jlabContents.setText("Você pressionou Entrar. É:" + email.getText());
-//			}
-			
 		}
 		
 		private void construirImagemDeFundo() {

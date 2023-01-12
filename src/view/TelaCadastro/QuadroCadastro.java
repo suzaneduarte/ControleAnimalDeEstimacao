@@ -5,6 +5,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 import view.TelaLogin.*;
+import view.TelaPrincipal.MeusPets;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -22,24 +23,23 @@ public class QuadroCadastro implements ActionListener {
 	
 	//trata eventos de ação 
 	public void actionPerformed(ActionEvent ae) {
-		// criar voltar, não esquecer de usar o .setActionCommand nos botões
+		// criar botão voltar, não esquecer de usar o .setActionCommand nos botões
 		if ("voltar" == ae.getActionCommand()) {
 	        
 	    } else if("cadastrar" == ae.getActionCommand()) {
-	        new PrimeiraTela();
+	        new MeusPets(); 
 	        janela.dispose();
 	    }
 	}
 	
 	public void construir() {
-//		construirFundo(janela);
 		construirTitulo(janela);
 		construirFormulario(janela);
 		construirBotoes(janela);
 	}
 	
 	private void construirTitulo(JFrame janela) {
-		JLabel titulo = new JLabel("Cadastro");
+		JLabel titulo = new JLabel("Cadastre-se!");
 		
 		titulo.setBounds(bordaX + 50, bordaY, 400, 90); 
 		titulo.setFont(new Font("Arial", Font.BOLD, 35));

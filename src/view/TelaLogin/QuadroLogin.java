@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import view.TelaCadastro.*;
+import view.TelaPrincipal.MeusPets;
 
 //import java.awt.image.BufferedImage;
 //import java.io.File;
@@ -23,7 +24,8 @@ public class QuadroLogin implements ActionListener {
 	//trata eventos de ação 
 	public void actionPerformed(ActionEvent ae) {
 		if ("entrar" == ae.getActionCommand()) {
-	        
+	        new MeusPets();
+	        janela.dispose();
 	    } else if("cadastrar" == ae.getActionCommand()) {
 	        new TelaCadastro();
 	        janela.dispose();
