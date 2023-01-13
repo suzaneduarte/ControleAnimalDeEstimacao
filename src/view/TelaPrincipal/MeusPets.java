@@ -12,6 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
 
+import view.TelaCadastroAnimal.TelaCadAnimal;
 
 	public class MeusPets implements ActionListener {
 		private static JFrame janela = new JFrame("Tela Principal"); 
@@ -35,9 +36,11 @@ import javax.swing.SwingUtilities;
 		}
 		
 		
-		//trata eventos de ação 
 		public void actionPerformed(ActionEvent ae) {
-			
+			if ("Cadastrar Pet" == ae.getActionCommand()) {
+		        new TelaCadAnimal();
+		        janela.dispose();
+		    } 
 		}
 		
 		public void construir() {

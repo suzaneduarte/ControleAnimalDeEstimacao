@@ -31,14 +31,19 @@ public class Menu implements ActionListener {
 		
 	janela.setJMenuBar(barraMenu); 	// Adiciona a barra de menu ao frame
 	
-    // Define e adiciona três menus drop down na barra de menus
-	
+    // Define e adiciona três menus drop down na barra de menus:
 	JMenu meuspetsMenu = new JMenu("Meus Pets");
 	JMenu vacinasMenu = new JMenu("Vacinas");
 	JMenu minhacontaMenu = new JMenu("Minha Conta");
+	
+    // Cria e adiciona um item simples para o menu:
+    JMenuItem sair = new JMenuItem("Sair");
+	
+	
 	barraMenu.add(meuspetsMenu);
 	barraMenu.add(vacinasMenu);
 	barraMenu.add(minhacontaMenu);
+	minhacontaMenu.add(sair);
 	
 	}
 }
