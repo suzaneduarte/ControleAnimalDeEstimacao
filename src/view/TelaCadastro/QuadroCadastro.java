@@ -43,7 +43,7 @@ public class QuadroCadastro implements ActionListener {
 		
 		titulo.setBounds(bordaX + 50, bordaY, 400, 90); 
 		titulo.setFont(new Font("Arial", Font.BOLD, 35));
-		titulo.setForeground(Color.black);
+		titulo.setForeground(Color.DARK_GRAY);
 		
 		janela.add(titulo);
 	}

@@ -43,7 +43,7 @@ public class QuadroLogin implements ActionListener {
 		
 		titulo.setBounds(bordaX, bordaY, 400, 90); 
 		titulo.setFont(new Font("Arial", Font.BOLD, 35));
-		titulo.setForeground(Color.black);
+		titulo.setForeground(Color.DARK_GRAY);
 		
 		janela.add(titulo);
 	}
