@@ -26,15 +26,14 @@ import view.TelaCadastroAnimal.TelaCadAnimal;
 
 			janela.setSize(448, 500); 
 			janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
-			
-			Menu menu = new Menu(janela); 
+
+			Menu menu = new Menu();
 			menu.construir(); // Chama o construir da classe Menu 
 			
 			this.construir(); // Chama o construir da classe Meus Pets 
 
 			janela.setVisible(true);
 		}
-		
 		
 		public void actionPerformed(ActionEvent ae) {
 			if ("Cadastrar Pet" == ae.getActionCommand()) {
