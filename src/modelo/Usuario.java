@@ -44,6 +44,11 @@ public class Usuario extends Individuo {
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
+	
+//	public void Usuario() {
+//	//criando Usuario 1
+//		nome.add(new Individuo("Renata Sousa"));
+//	}
 
 	public String toString() {
 		StringBuilder stringb = new StringBuilder();
