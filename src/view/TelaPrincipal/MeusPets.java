@@ -15,7 +15,7 @@ import javax.swing.SwingUtilities;
 import view.TelaCadastroAnimal.TelaCadAnimal;
 
 	public class MeusPets implements ActionListener {
-		private static JFrame janela = new JFrame("Tela Principal"); 
+		private static JFrame janela = new JFrame("Tela Principal - Meus Pets"); 
 		
 		private int bordaX = 24;
 		private int bordaY = 24;
