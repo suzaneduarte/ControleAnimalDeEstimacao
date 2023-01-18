@@ -27,7 +27,7 @@ import view.TelaCadastroAnimal.TelaCadAnimal;
 			janela.setSize(448, 500); 
 			janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
 
-			Menu menu = new Menu();
+			Menu menu = new Menu(janela);
 			menu.construir(); // Chama o construir da classe Menu 
 			
 			this.construir(); // Chama o construir da classe Meus Pets 
