@@ -3,6 +3,8 @@ package view.TelaLogin;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+
+import controle.ControleLogin;
 import view.TelaCadastro.*;
 import view.TelaPrincipal.MeusPets;
 
@@ -13,22 +15,21 @@ import view.TelaPrincipal.MeusPets;
 
 public class QuadroLogin implements ActionListener {
 	private JFrame janela;
-	
+	private ControleLogin controle;
 	private int bordaX = 24;
 	private int bordaY = 24;
 	
-	public QuadroLogin(JFrame janela) {
+	public QuadroLogin(JFrame janela, ControleLogin controle) {
 		this.janela = janela;
+		this.controle = controle;
 	}
 	
 	//trata eventos de ação 
 	public void actionPerformed(ActionEvent ae) {
 		if ("entrar" == ae.getActionCommand()) {
-	        new MeusPets();
-	        janela.dispose();
+	        controle.Entrar();
 	    } else if("cadastrar" == ae.getActionCommand()) {
-	        new TelaCadastro();
-	        janela.dispose();
+	    	controle.Cadastrar();
 	    }
 	}
 	

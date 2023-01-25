@@ -11,9 +11,12 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import javax.imageio.ImageIO;
 import java.io.IOException;
+import controle.ControleLogin;
 
 public class PrimeiraTela implements ActionListener {
 	private static JFrame janelainicial = new JFrame("Controle de Animais de Estimação"); //cria o contêiner janelainicial
+	
+	private ControleLogin controle = new ControleLogin(janelainicial);
 	
 	public PrimeiraTela() {
 //		//como o layout do contêiner é nulo:
@@ -24,7 +27,7 @@ public class PrimeiraTela implements ActionListener {
 		
 		construirImagemDeFundo();
 		
-		QuadroLogin quadroLogin = new QuadroLogin(janelainicial);
+		QuadroLogin quadroLogin = new QuadroLogin(janelainicial, controle);
 		quadroLogin.construir();
 		
 
