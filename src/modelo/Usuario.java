@@ -12,12 +12,11 @@ public class Usuario extends Individuo {
 	private String telefone;
 	private List<AnimalDeEstimacao> animais = new ArrayList<AnimalDeEstimacao>();
 	
-
-	public Usuario(String email, String cpf, String telefone, String nome, String nascimento, Sexo sexo) {
-			super(nome, nascimento, sexo);
-			this.email = email;
-			this.cpf = cpf;
-			this.telefone = telefone;
+	public Usuario(String email, String cpf, String telefone, String nome, Date nascimento, Sexo sexo) {
+		super(nome, nascimento, sexo);
+		this.email = email;
+		this.cpf = cpf;
+		this.telefone = telefone;
 	}
 
 
@@ -29,7 +28,6 @@ public class Usuario extends Individuo {
 	public void setEmail(String email) {
 		this.email = email;
 	} 
-
 
     public String getCPF() {
 		return cpf;
