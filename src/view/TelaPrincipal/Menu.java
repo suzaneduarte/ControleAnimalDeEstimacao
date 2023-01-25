@@ -10,7 +10,7 @@ import view.TelaCadastro.*;
 //import java.io.IOException;
 
 public class Menu implements ActionListener {	
-	private JFrame janela; 
+	private JFrame janela;
 	private JButton meuspets, vacinas, minhaconta;
 	
 	private int bordaX = 24;
