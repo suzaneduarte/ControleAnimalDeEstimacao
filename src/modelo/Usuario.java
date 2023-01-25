@@ -1,16 +1,19 @@
 package modelo;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+
 import enumerate.Sexo;
 
 public class Usuario extends Individuo { 
 	private String email;
 	private String cpf;
 	private String telefone;
-
+	private List<AnimalDeEstimacao> animais = new ArrayList<AnimalDeEstimacao>();
 	
 
-	public Usuario(String email, String cpf, String telefone, String nome, Date nascimento, Sexo sexo) {
+	public Usuario(String email, String cpf, String telefone, String nome, String nascimento, Sexo sexo) {
 			super(nome, nascimento, sexo);
 			this.email = email;
 			this.cpf = cpf;
@@ -45,11 +48,18 @@ public class Usuario extends Individuo {
 		this.telefone = telefone;
 	}
 	
-//	public void Usuario() {
-//	//criando Usuario 1
-//		nome.add(new Individuo("Renata Sousa"));
-//	}
+	public List <AnimalDeEstimacao> getAnimaisDeEstimacao() {
+		return animais;
+	}
 
+	public void AddAnimal(AnimalDeEstimacao animal) {
+		this.animais.add(animal);
+	} 
+	
+	public void DeleteAnimal(AnimalDeEstimacao animal) {
+		this.animais.remove(animal);
+	}
+	
 	public String toString() {
 		StringBuilder stringb = new StringBuilder();
 		stringb.append("Usuário: \n");

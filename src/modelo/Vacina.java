@@ -6,14 +6,14 @@ import java.util.Date;
 
 public class Vacina {
 	private String nomeDaVacina;
-	private Date data;
+	private String data;
 	private String lote;
 	private String laboratorio;
 	private boolean necessitaRevacina;
 	private int periodo;
 	private Intervalo intervalo;
     
-	public Vacina(String nomeDaVacina, Date data, String lote, String laboratorio, boolean necessitaRevacina, int periodo, Intervalo intervalo) {
+	public Vacina(String nomeDaVacina, String data, String lote, String laboratorio, boolean necessitaRevacina, int periodo, Intervalo intervalo) {
 		this.nomeDaVacina = nomeDaVacina;
 		this.data = data;
 		this.lote = lote;
@@ -35,11 +35,11 @@ public class Vacina {
 	}
 	
 	
-	public Date getData() {
+	public String getData() {
 		return data;
 	}
 	
-	public void setData(Date data) {
+	public void setData(String data) {
 		this.data = data;
 	}
 	

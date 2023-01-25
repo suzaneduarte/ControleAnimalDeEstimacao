@@ -6,11 +6,11 @@ import java.util.Date;
 
 public abstract class Individuo {
 	private String nome;
-	private Date nascimento;
+	private String nascimento;
 	private Sexo sexo;
 
 
-	public Individuo(String nome, Date nascimento, Sexo sexo) {
+	public Individuo(String nome, String nascimento, Sexo sexo) {
 			this.nome = nome;
 			this.nascimento = nascimento;
 			this.sexo = sexo;
@@ -27,11 +27,11 @@ public abstract class Individuo {
 	}
 
 
-	public Date getNascimento() {
+	public String getNascimento() {
 		return nascimento;
 	}
 
-	public void setNascimento(Date nascimento) {
+	public void setNascimento(String nascimento) {
 		this.nascimento = nascimento;
 	}
 

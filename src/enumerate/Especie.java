@@ -16,4 +16,10 @@ public enum Especie{
 	public String getDescricao () {
 		return descricao;
 	}
+	
+	public String toString() {
+		StringBuilder stringb = new StringBuilder();
+		stringb.append("Especie: "+ this.getDescricao() + "\n");		
+		return stringb.toString();
+	}
 }

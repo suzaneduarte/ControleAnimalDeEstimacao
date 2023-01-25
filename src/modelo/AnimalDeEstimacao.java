@@ -1,14 +1,18 @@
 package modelo;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+
 import enumerate.Especie;
 import enumerate.Sexo;
 
 public class AnimalDeEstimacao extends Individuo { 
 	private Especie especie;
 	private Raca raca;
+	private List<Vacina> vacinas = new ArrayList<Vacina>();
 
-	public AnimalDeEstimacao(Especie especie, Raca raca, String nome, Date nascimento, Sexo sexo) {
+	public AnimalDeEstimacao(Especie especie, Raca raca, String nome, String nascimento, Sexo sexo) {
 		super(nome, nascimento, sexo);
 		this.especie = especie;
 		this.raca = raca;
@@ -31,6 +35,18 @@ public class AnimalDeEstimacao extends Individuo {
 	public void setRaca(Raca raca) {
 		this.raca = raca;
 	}  
+	
+	public List <Vacina> getVacinas() {
+		return vacinas;
+	}
+
+	public void AddVacina(Vacina vacina) {
+		this.vacinas.add(vacina);
+	} 
+	
+	public void DeleteVacina(Vacina vacina) {
+		this.vacinas.remove(vacina);
+	}
 	
 	public String toString() {
 		StringBuilder stringb = new StringBuilder();
