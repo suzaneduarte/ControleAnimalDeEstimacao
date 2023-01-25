@@ -12,7 +12,7 @@ public class Usuario extends Individuo {
 	private String telefone;
 	private List<AnimalDeEstimacao> animais = new ArrayList<AnimalDeEstimacao>();
 	
-	public Usuario(String email, String cpf, String telefone, String nome, Date nascimento, Sexo sexo) {
+	public Usuario(String email, String cpf, String telefone, String nome, String nascimento, Sexo sexo) {
 		super(nome, nascimento, sexo);
 		this.email = email;
 		this.cpf = cpf;
