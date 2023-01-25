@@ -1,6 +1,7 @@
 package view.TelaCadastroAnimal;
 
 import java.awt.event.ActionEvent;
+
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -12,9 +13,11 @@ import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
 
 import view.TelaCadastroAnimal.TelaCadAnimal;
+import controle.ControleCadastroPet;
 
 	public class TelaCadAnimal implements ActionListener {
 		private static JFrame telacadastroanimal = new JFrame("Cadastrar Animal de Estimação"); 
+		private ControleCadastroPet controle = new ControleCadastroPet(telacadastroanimal);
 		
 		public TelaCadAnimal() {
 
@@ -25,7 +28,7 @@ import view.TelaCadastroAnimal.TelaCadAnimal;
 			
 			construirImagemDeFundo();
 			
-			QuadroAnimal quadrocadastro = new QuadroAnimal(telacadastroanimal);
+			QuadroAnimal quadrocadastro = new QuadroAnimal(telacadastroanimal, controle);
 			quadrocadastro.construir();
 			
 			telacadastroanimal.setVisible(true);

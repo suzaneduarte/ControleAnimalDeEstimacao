@@ -11,25 +11,25 @@ import view.TelaPrincipal.MeusPets;
 //import javax.imageio.ImageIO;
 //import java.io.IOException;
 
+import controle.ControleCadastroPet;
+
 public class QuadroAnimal implements ActionListener {
 	private JFrame janela;
-	
+	private ControleCadastroPet controle;
 	private int bordaX = 24;
 	private int bordaY = 24;
 	
-	public QuadroAnimal(JFrame janela) {
+	public QuadroAnimal(JFrame janela, ControleCadastroPet controle) {
 		this.janela = janela;
+		this.controle = controle;
 	}
 	
 	//trata eventos de ação 
 	public void actionPerformed(ActionEvent ae) {
 		if ("voltar" == ae.getActionCommand()) {
-	        new MeusPets();
-	        janela.dispose();
+	        controle.Voltar();
 	    } else if("cadastrar" == ae.getActionCommand()) {
-	       //adicionar na lista de pets 
-	        new MeusPets();
-	        janela.dispose();
+	    	controle.Cadastrar();
 	    }
 	}
 	

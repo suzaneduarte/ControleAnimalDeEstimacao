@@ -1,6 +1,6 @@
 package view.TelaPrincipal;
 
-	import java.awt.event.ActionEvent;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -13,9 +13,13 @@ import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
 
 import view.TelaCadastroAnimal.TelaCadAnimal;
+import controle.ControleLogin;
+import controle.ControleMeusPets;
 
 	public class MeusPets implements ActionListener {
 		private static JFrame janela = new JFrame("Tela Principal"); 
+		
+		private ControleMeusPets controle = new ControleMeusPets(janela);
 		
 		private int bordaX = 24;
 		private int bordaY = 24;
@@ -37,8 +41,7 @@ import view.TelaCadastroAnimal.TelaCadAnimal;
 		
 		public void actionPerformed(ActionEvent ae) {
 			if ("Cadastrar Pet" == ae.getActionCommand()) {
-		        new TelaCadAnimal();
-		        janela.dispose();
+				controle.CadastrarPet();
 		    } 
 		}
 		
