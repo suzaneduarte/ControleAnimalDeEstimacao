@@ -1,6 +1,7 @@
 package view.TelaLogin;
-
+	
 import java.awt.*;
+
 import java.awt.event.*;
 import javax.swing.*;
 
@@ -12,14 +13,24 @@ import java.io.File;
 import javax.imageio.ImageIO;
 import java.io.IOException;
 import controle.ControleLogin;
+import modelo.Dados;
 
 public class PrimeiraTela implements ActionListener {
 	private static JFrame janelainicial = new JFrame("Controle de Animais de Estimação"); //cria o contêiner janelainicial
+	private Dados dados;
+	private ControleLogin controle = new ControleLogin(janelainicial, dados);
 	
-	private ControleLogin controle = new ControleLogin(janelainicial);
+	public PrimeiraTela(Dados dados) { //caso venha de outra tela (com parâmetro)
+		this.dados = dados;
+		Inicializar();
+	}
 	
 	public PrimeiraTela() {
-//		//como o layout do contêiner é nulo:
+		this.dados = new Dados();
+		Inicializar();
+	}
+	
+	private void Inicializar() {
 		janelainicial.setLayout(null);
 
 		janelainicial.setSize(448, 320); //define as dimensões em pixel da janela inicial
@@ -31,7 +42,7 @@ public class PrimeiraTela implements ActionListener {
 		quadroLogin.construir();
 		
 
-//		//exibe a janela
+	//exibe a janela
 		janelainicial.setVisible(true);
 	}
 	

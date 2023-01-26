@@ -1,11 +1,14 @@
 package view.TelaCadastro;
 
 import java.awt.*;
+
 import java.awt.event.*;
 import javax.swing.*;
 
 import view.TelaLogin.*;
 import view.TelaPrincipal.MeusPets;
+import controle.ControleCadastro;
+import controle.ControleLogin;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -16,9 +19,11 @@ public class QuadroCadastro implements ActionListener {
 	private JFrame janela;
 	private int bordaX = 24;
 	private int bordaY = 24;
-	
-	public QuadroCadastro(JFrame janela) {
+	private ControleCadastro controle;
+
+	public QuadroCadastro(JFrame janela, ControleCadastro controle) {
 		this.janela = janela;
+		this.controle = controle;
 	}
 	
 	//trata eventos de ação 
@@ -27,8 +32,7 @@ public class QuadroCadastro implements ActionListener {
 		if ("voltar" == ae.getActionCommand()) {
 	        
 	    } else if("cadastrar" == ae.getActionCommand()) {
-	        new MeusPets(); 
-	        janela.dispose();
+	    	controle.Cadastrar();
 	    }
 	}
 	

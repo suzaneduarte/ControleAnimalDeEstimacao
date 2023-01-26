@@ -1,6 +1,6 @@
 package view.TelaCadastro;
 
-	import java.awt.event.ActionEvent;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -11,13 +11,27 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
 
+import controle.ControleLogin;
 import view.TelaLogin.PrimeiraTela;
-
+import controle.ControleCadastro;
+import modelo.Dados;
+	
 	public class TelaCadastro implements ActionListener {
 		private static JFrame telacadastro = new JFrame("Controle de Animais de Estimação"); //cria o contêiner telacadastro
+		private ControleCadastro controle = new ControleCadastro(telacadastro);
+		private Dados dados;
 		
 		public TelaCadastro() {
-//			//como o layout do contêiner é nulo:
+			this.dados = new Dados();
+			Inicializar();
+		}
+		
+		public TelaCadastro(Dados dados) {
+			this.dados = dados;
+			Inicializar();
+		}
+		
+		private void Inicializar() {
 			telacadastro.setLayout(null);
 
 			telacadastro.setSize(448, 500); //define as dimensões em pixel da janela inicial
@@ -25,7 +39,7 @@ import view.TelaLogin.PrimeiraTela;
 			
 			construirImagemDeFundo();
 			
-			QuadroCadastro quadrocadastro = new QuadroCadastro(telacadastro);
+			QuadroCadastro quadrocadastro = new QuadroCadastro(telacadastro, controle);
 			quadrocadastro.construir();
 			
 

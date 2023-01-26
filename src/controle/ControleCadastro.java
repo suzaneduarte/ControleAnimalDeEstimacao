@@ -2,8 +2,11 @@ package controle;
 
 import java.util.*;
 
+import javax.swing.JFrame;
+
 import enumerate.Sexo;
 import modelo.*;
+import view.TelaPrincipal.MeusPets;
 
 /**
  *  Classe ControleCadastro faz o controle de todos os dados dos usuários
@@ -14,7 +17,16 @@ import modelo.*;
 
 public class ControleCadastro {
 	
-	private List<Usuario> usuarios;
+	private JFrame janela;
+	
+	public ControleCadastro (JFrame janela) {
+		this.janela = janela;
+	}	
+	
+	public void Cadastrar() {
+		new MeusPets();
+	    janela.dispose();
+	}
 	
 	/**
 	 * Construtor ControleUsuario
@@ -31,32 +43,32 @@ public class ControleCadastro {
 	 * @return String[]
 	 */
 	
-	public String[] getListaUsuarios() {
-		String[] listaUsuarios = new String[usuarios.size()];
-		for(int i = 0; i<usuarios.size(); i++) {
-			listaUsuarios[i] = ("  "+usuarios.get(i).getNome());
-		}
-		return listaUsuarios;
-	}
-
-	public String getNome(int i) {
-		return usuarios.get(i).getNome();
-	}
-
-	public String getEmail(int i) {
-		return usuarios.get(i).getEmail();
-	}
-
-	public String getTelefone(int i) {
-		return usuarios.get(i).getTelefone();
-	}
-	
-	public Sexo getSexo(int i) {
-		return usuarios.get(i).getSexo();
-	}
-	
-	public String getCpf(int i) {
-		return usuarios.get(i).getCPF();	
-	}	
-	
+//	public String[] getListaUsuarios() {
+//		String[] listaUsuarios = new String[usuarios.size()];
+//		for(int i = 0; i<usuarios.size(); i++) {
+//			listaUsuarios[i] = ("  "+usuarios.get(i).getNome());
+//		}
+//		return listaUsuarios;
+//	}
+//
+//	public String getNome(int i) {
+//		return usuarios.get(i).getNome();
+//	}
+//
+//	public String getEmail(int i) {
+//		return usuarios.get(i).getEmail();
+//	}
+//
+//	public String getTelefone(int i) {
+//		return usuarios.get(i).getTelefone();
+//	}
+//	
+//	public Sexo getSexo(int i) {
+//		return usuarios.get(i).getSexo();
+//	}
+//	
+//	public String getCpf(int i) {
+//		return usuarios.get(i).getCPF();	
+//	}	
+//	
 }

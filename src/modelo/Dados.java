@@ -11,6 +11,11 @@ public class Dados {
 	private List<Vacina> vacinas = new ArrayList<Vacina>();
 	private List<AnimalDeEstimacao> animais = new ArrayList<AnimalDeEstimacao>();
 	private List<Usuario> usuarios = new ArrayList<Usuario>();
+	private Usuario usuarioConectado;
+	
+	public Dados() {
+		cadastrosProntos();
+	}
 	
 	public void cadastrosProntos() {
 		// Usuario 1
@@ -27,6 +32,7 @@ public class Dados {
 		animais.add(animal0);
 		vacinas.add(vacina0);
 		
+		
 		// Usuario 2
 		Usuario usuario1 = new Usuario("ssuzane9@hotmail.com", "000.859.111-22", "617777-5555", "Suzane Alves Duarte", "09/02/2000", Sexo.FEMININO);
 		AnimalDeEstimacao animal1 = new AnimalDeEstimacao(Especie.CANINO, raca0, "Zeca", "10/06/2022", Sexo.MASCULINO);			
@@ -35,8 +41,20 @@ public class Dados {
 		animal1.AddVacina(vacina0);
 		usuario1.AddAnimal(animal1);
 		usuarios.add(usuario1);
-		animais.add(animal1);
-				
+		animais.add(animal1);	
+		usuarioConectado = usuario1;
+	}
+	
+	public void setUsuarioConectado(Usuario usuario) {
+		usuarioConectado = usuario;
+	}
+	
+	public Usuario getUsuarioConectado() {
+		return usuarioConectado;
+	}
+	
+	public List<AnimalDeEstimacao> getAnimaisDeUsuario() {
+		return usuarioConectado.getAnimaisDeEstimacao();
 	}
 }
 
