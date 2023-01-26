@@ -18,7 +18,7 @@ import modelo.Dados;
 public class PrimeiraTela implements ActionListener {
 	private static JFrame janelainicial = new JFrame("Controle de Animais de Estimação"); //cria o contêiner janelainicial
 	private Dados dados;
-	private ControleLogin controle = new ControleLogin(janelainicial, dados);
+	private ControleLogin controle;
 	
 	public PrimeiraTela(Dados dados) { //caso venha de outra tela (com parâmetro)
 		this.dados = dados;
@@ -31,6 +31,7 @@ public class PrimeiraTela implements ActionListener {
 	}
 	
 	private void Inicializar() {
+		controle = new ControleLogin(janelainicial, dados);
 		janelainicial.setLayout(null);
 
 		janelainicial.setSize(448, 320); //define as dimensões em pixel da janela inicial

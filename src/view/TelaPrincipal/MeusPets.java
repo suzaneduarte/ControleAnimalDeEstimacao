@@ -20,7 +20,7 @@ import modelo.Dados;
 import view.TelaPrincipal.Tabela;
 	
 public class MeusPets implements ActionListener {
-		private static JFrame janela = new JFrame("Tela Principal"); 
+		private static JFrame janela = new JFrame("Tela Principal - Meus Pets"); 
 		private Dados dados;
 		private ControleMeusPets controle;
 		
@@ -82,7 +82,7 @@ public class MeusPets implements ActionListener {
 		private void construirBotoes(JFrame janela) {
 			JButton botaoAdicionarPet = new JButton("Cadastrar Pet");
 			
-			botaoAdicionarPet.setBounds(bordaX + 120, bordaY + 165, 160, 30);
+			botaoAdicionarPet.setBounds(bordaX + 120, bordaY + 300, 160, 30);
 			botaoAdicionarPet.setActionCommand("Cadastrar Pet");
 			botaoAdicionarPet.addActionListener(this);
 			
