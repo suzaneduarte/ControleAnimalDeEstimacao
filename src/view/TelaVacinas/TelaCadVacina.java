@@ -35,7 +35,7 @@ public class TelaCadVacina implements ActionListener {
 	private void Inicializar() {
 		telacadastrovacina.setLayout(null);
 
-		telacadastrovacina.setSize(448, 500); 
+		telacadastrovacina.setSize(520, 650); 
 		telacadastrovacina.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
 		
 		construirImagemDeFundo();

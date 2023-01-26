@@ -37,9 +37,9 @@ public class QuadroVacina implements ActionListener {
 	}
 	
 	private void construirTitulo(JFrame janela) {
-		JLabel titulo = new JLabel("Cadastre uma vacina");
+		JLabel titulo = new JLabel("Cadastre uma vacina!");
 		
-		titulo.setBounds(bordaX, bordaY, 500, 100); 
+		titulo.setBounds(bordaX, bordaY + 25, 550, 100); 
 		titulo.setFont(new Font("Arial", Font.BOLD, 35));
 		titulo.setForeground(Color.DARK_GRAY);
 		
@@ -55,11 +55,11 @@ public class QuadroVacina implements ActionListener {
 		JButton botaoVoltar = new JButton("Voltar");
 		JButton botaoCadastrar = new JButton("Cadastrar");
 		
-		botaoVoltar.setBounds(bordaX + 80, bordaY + 380, 120, 20);
+		botaoVoltar.setBounds(bordaX + 80, bordaY + 520, 120, 20);
 		botaoVoltar.setActionCommand("voltar");
 		botaoVoltar.addActionListener(this);
 		
-		botaoCadastrar.setBounds(bordaX + 224, bordaY + 380, 120, 20);
+		botaoCadastrar.setBounds(bordaX + 224, bordaY + 520, 120, 20);
 		botaoCadastrar.setActionCommand("cadastrar");
 		botaoCadastrar.addActionListener(this);
 		

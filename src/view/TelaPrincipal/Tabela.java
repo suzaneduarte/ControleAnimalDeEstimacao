@@ -36,6 +36,7 @@ public class Tabela implements ListSelectionListener {
 		
 		listaPets.setListData(controle.GerarListaDePets());
 		listaPets.addListSelectionListener(this);
+		listaPets.setOpaque(false);
 		
 		janela.add(listaPets);
 	}
