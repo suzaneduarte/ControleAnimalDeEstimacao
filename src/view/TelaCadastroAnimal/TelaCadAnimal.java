@@ -23,7 +23,7 @@ import controle.ControleCadastroPet;
 
 			telacadastroanimal.setLayout(null);
 
-			telacadastroanimal.setSize(448, 500); 
+			telacadastroanimal.setSize(475, 550); 
 			telacadastroanimal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
 			
 			construirImagemDeFundo();

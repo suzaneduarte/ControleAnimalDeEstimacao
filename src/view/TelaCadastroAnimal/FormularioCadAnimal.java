@@ -13,6 +13,9 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.text.MaskFormatter;
 
+import enumerate.Especie;
+import enumerate.Intervalo;
+
 	public class FormularioCadAnimal implements ActionListener {
 		JFrame janela;
 		
@@ -57,7 +60,7 @@ import javax.swing.text.MaskFormatter;
 			raça.setFont(new Font("Arial", Font.BOLD, 14));
 			
 			JTextField digitarRaça = new JTextField(11);
-			digitarRaça.setBounds(bordaX + 150, bordaY + 261, 180, 20);
+			digitarRaça.setBounds(bordaX + 150, bordaY + 260, 180, 20);
 			
 			janela.add(raça);
 			janela.add(digitarRaça);
@@ -89,13 +92,14 @@ import javax.swing.text.MaskFormatter;
 		}
 		
 		private void construirCaixaDaEspecie(JFrame janela) {
-			JLabel datanasc = new JLabel ("Especie:");
-			datanasc.setBounds(bordaX, bordaY + 300, 160, 20);
-			datanasc.setFont(new Font("Arial", Font.BOLD, 14));
+			JLabel especie = new JLabel ("Especie:");
+			especie.setBounds(bordaX, bordaY + 300, 160, 20);
+			especie.setFont(new Font("Arial", Font.BOLD, 14));
 			
-//			utilizar enum: 
-//			jCBEstadoCivil.setModel(new javax.swing.DefaultComboBoxModel(this.clienteController.getDescricao().getEstadoCivil().values()));
-			
-			janela.add(datanasc);	
+			JComboBox comboboxEspecie = new JComboBox(Especie.values());
+			comboboxEspecie.setBounds(bordaX + 150, bordaY + 295, 180, 20);
+			comboboxEspecie.setOpaque(false);
+			janela.add(comboboxEspecie);
+			janela.add(especie);	
 		}
 	}

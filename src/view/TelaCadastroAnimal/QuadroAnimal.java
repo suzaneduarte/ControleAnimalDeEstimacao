@@ -42,7 +42,7 @@ public class QuadroAnimal implements ActionListener {
 	private void construirTitulo(JFrame janela) {
 		JLabel titulo = new JLabel("Cadastre seu Pet!");
 		
-		titulo.setBounds(bordaX, bordaY, 500, 100); 
+		titulo.setBounds(bordaX, bordaY, 500, 160); 
 		titulo.setFont(new Font("Arial", Font.BOLD, 35));
 		titulo.setForeground(Color.DARK_GRAY);
 		
@@ -58,11 +58,11 @@ public class QuadroAnimal implements ActionListener {
 		JButton botaoVoltar = new JButton("Voltar");
 		JButton botaoCadastrar = new JButton("Cadastrar");
 		
-		botaoVoltar.setBounds(bordaX + 80, bordaY + 380, 120, 20);
+		botaoVoltar.setBounds(bordaX + 80, bordaY + 420, 120, 20);
 		botaoVoltar.setActionCommand("voltar");
 		botaoVoltar.addActionListener(this);
 		
-		botaoCadastrar.setBounds(bordaX + 224, bordaY + 380, 120, 20);
+		botaoCadastrar.setBounds(bordaX + 224, bordaY + 420, 120, 20);
 		botaoCadastrar.setActionCommand("cadastrar");
 		botaoCadastrar.addActionListener(this);
 		

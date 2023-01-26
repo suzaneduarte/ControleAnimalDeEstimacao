@@ -2,10 +2,10 @@ package enumerate;
 
 
 public enum Especie{
-	CANINO("canino"), 
-	FELINO("felino"),
-	AVE("ave"),
-	ROEDOR("roedor");
+	CANINO("Canino"), 
+	FELINO("Felino"),
+	AVE("Ave"),
+	ROEDOR("Roedor");
 	
 	private String descricao;
 	
@@ -19,7 +19,7 @@ public enum Especie{
 	
 	public String toString() {
 		StringBuilder stringb = new StringBuilder();
-		stringb.append("Especie: "+ this.getDescricao() + "\n");		
+		stringb.append(this.getDescricao() + "\n");		
 		return stringb.toString();
 	}
 }
