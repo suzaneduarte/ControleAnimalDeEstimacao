@@ -40,6 +40,7 @@ public class Dados {
 		//Adicionando no Usuario 2 -> mesma vacina e raca
 		animal1.AddVacina(vacina0);
 		usuario1.AddAnimal(animal1);
+		usuario1.AddAnimal(animal0);
 		usuarios.add(usuario1);
 		animais.add(animal1);	
 		usuarioConectado = usuario1;

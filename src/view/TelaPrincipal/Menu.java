@@ -22,8 +22,9 @@ public class Menu implements ActionListener {
 
 	//trata eventos de ação 
 	public void actionPerformed(ActionEvent ae) {
+		
+			}
 
-	}
 	
 	public void construir() {
 		JMenuBar barraMenu = new JMenuBar(); 

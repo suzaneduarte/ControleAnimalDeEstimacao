@@ -58,7 +58,11 @@ public class MeusPets implements ActionListener {
 		public void actionPerformed(ActionEvent ae) {
 			if ("Cadastrar Pet" == ae.getActionCommand()) {
 				controle.CadastrarPet();
-		    } 
+		   
+			} else if("Vacinas" == ae.getActionCommand()) {
+		    	controle.Vacinas();
+		    }
+			
 		}
 		
 		public void construir() {
@@ -87,6 +91,7 @@ public class MeusPets implements ActionListener {
 			botaoAdicionarPet.addActionListener(this);
 			
 			janela.add(botaoAdicionarPet);
+			
 		}
 
 		//cria o quadro na thread de despacho de evento
