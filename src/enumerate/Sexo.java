@@ -9,9 +9,9 @@ package enumerate;
 
 
 public enum Sexo {
-	FEMININO("feminino"), 
-	MASCULINO("masculino"),
-	OUTRO("outro");
+	FEMININO("Feminino"), 
+	MASCULINO("Masculino"),
+	OUTRO("Outro");
 	
 	private String descricao;
 	

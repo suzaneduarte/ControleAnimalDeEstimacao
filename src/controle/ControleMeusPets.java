@@ -76,4 +76,15 @@ public class ControleMeusPets {
 		new PrimeiraTela();
 	    janela.dispose();
 	}
+
+	public void deslogar() {
+		dados.setUsuarioConectado(null);
+		new PrimeiraTela();
+	    janela.dispose();
+	}
+
+	public void telaDeVacinas() {
+		new TelaCadVacina();
+		janela.dispose();
+	}
 }

@@ -18,7 +18,7 @@ import modelo.Dados;
 	
 	public class TelaCadastro implements ActionListener {
 		private static JFrame telacadastro = new JFrame("Controle de Animais de Estimação"); //cria o contêiner telacadastro
-		private ControleCadastro controle = new ControleCadastro(telacadastro);
+		private ControleCadastro controle;
 		private Dados dados;
 		
 		public TelaCadastro() {
@@ -32,6 +32,7 @@ import modelo.Dados;
 		}
 		
 		private void Inicializar() {
+			controle = new ControleCadastro(telacadastro, dados);
 			telacadastro.setLayout(null);
 
 			telacadastro.setSize(448, 500); //define as dimensões em pixel da janela inicial

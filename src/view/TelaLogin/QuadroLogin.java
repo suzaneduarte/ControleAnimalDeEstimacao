@@ -18,6 +18,7 @@ public class QuadroLogin implements ActionListener {
 	private ControleLogin controle;
 	private int bordaX = 24;
 	private int bordaY = 24;
+	private FormularioLogin formularioLogin;
 	
 	public QuadroLogin(JFrame janela, ControleLogin controle) {
 		this.janela = janela;
@@ -27,7 +28,7 @@ public class QuadroLogin implements ActionListener {
 	//trata eventos de ação 
 	public void actionPerformed(ActionEvent ae) {
 		if ("entrar" == ae.getActionCommand()) {
-	        controle.Entrar();
+	        controle.Entrar(formularioLogin.getEmail(), formularioLogin.getSenha());
 	    } else if("cadastrar" == ae.getActionCommand()) {
 	    	controle.Cadastrar();
 	    }
@@ -50,7 +51,7 @@ public class QuadroLogin implements ActionListener {
 	}
 	
 	private void construirFormulario(JFrame janela) {
-		FormularioLogin formularioLogin = new FormularioLogin(janela);
+		formularioLogin = new FormularioLogin(janela);
 		formularioLogin.construir();
 	}
 	

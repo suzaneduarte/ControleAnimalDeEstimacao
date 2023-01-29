@@ -20,6 +20,7 @@ public class QuadroCadastro implements ActionListener {
 	private int bordaX = 24;
 	private int bordaY = 24;
 	private ControleCadastro controle;
+	private FormularioCadastro formularioCadastro;
 
 	public QuadroCadastro(JFrame janela, ControleCadastro controle) {
 		this.janela = janela;
@@ -32,7 +33,16 @@ public class QuadroCadastro implements ActionListener {
 		if ("voltar" == ae.getActionCommand()) {
 	        
 	    } else if("cadastrar" == ae.getActionCommand()) {
-	    	controle.Cadastrar();
+	    	controle.Cadastrar(
+	    			formularioCadastro.getEmail(),
+	    			formularioCadastro.getCpf(),
+	    			formularioCadastro.getTelefone(),
+	    			"",
+	    			formularioCadastro.getDatanasc(),
+	    			formularioCadastro.getSexo(),
+	    			formularioCadastro.getSenha(),
+	    			formularioCadastro.getConfirmarSenha()
+	    		);
 	    }
 	}
 	
@@ -53,7 +63,7 @@ public class QuadroCadastro implements ActionListener {
 	}
 	
 	private void construirFormulario(JFrame janela) {
-		FormularioCadastro formularioCadastro = new FormularioCadastro(janela);
+		formularioCadastro = new FormularioCadastro(janela);
 		formularioCadastro.construir();
 	}
 	
