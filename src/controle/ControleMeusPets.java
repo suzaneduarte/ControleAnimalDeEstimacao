@@ -8,6 +8,7 @@ import javax.swing.JFrame;
 import modelo.*;
 import view.TelaCadastro.TelaCadastro;
 import view.TelaCadastroAnimal.TelaCadAnimal;
+import view.TelaDetalhesDoPet.TelaDetalhesDoPet;
 import view.TelaLogin.PrimeiraTela;
 import view.TelaPrincipal.MeusPets;
 import view.TelaVacinas.TelaCadVacina;
@@ -86,5 +87,13 @@ public class ControleMeusPets {
 	public void telaDeVacinas() {
 		new TelaCadVacina();
 		janela.dispose();
+	}
+
+	public void detalhesDoPet(int selectedIndex) {
+		List<AnimalDeEstimacao> animais = dados.getAnimaisDeUsuario();
+		AnimalDeEstimacao animalSelecionado = animais.get(selectedIndex);
+		
+		new TelaDetalhesDoPet(animalSelecionado, dados);
+		janela.dispose(); 
 	}
 }

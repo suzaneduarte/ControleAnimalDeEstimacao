@@ -14,12 +14,14 @@ import javax.swing.SwingUtilities;
 
 import view.TelaCadastroAnimal.TelaCadAnimal;
 import controle.ControleCadastroPet;
+import modelo.AnimalDeEstimacao;
 import modelo.Dados;
 
 public class TelaCadAnimal implements ActionListener {
 	private static JFrame telacadastroanimal = new JFrame("Cadastrar Animal de Estimação"); 
 	private ControleCadastroPet controle;
 	private Dados dados;
+	private AnimalDeEstimacao animal = null;
 	
 	public TelaCadAnimal(Dados dados) {
 		this.dados = dados;
@@ -31,8 +33,14 @@ public class TelaCadAnimal implements ActionListener {
 		Inicializar();
 	}
 	
+	public TelaCadAnimal(Dados dados, AnimalDeEstimacao animal) {
+		this.dados = dados;
+		this.animal = animal;
+		Inicializar();
+	}
+
 	private void Inicializar() {
-		controle = new ControleCadastroPet(telacadastroanimal, dados);
+		controle = new ControleCadastroPet(telacadastroanimal, dados, animal);
 		telacadastroanimal.setLayout(null);
 
 		telacadastroanimal.setSize(475, 600); 

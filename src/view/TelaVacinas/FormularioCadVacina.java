@@ -13,13 +13,16 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.text.MaskFormatter;
 
+import controle.ControleVacinas;
 import enumerate.Intervalo;
 import enumerate.Sexo;
+import modelo.Vacina;
 
 import javax.swing.JCheckBox;
 
 	public class FormularioCadVacina implements ActionListener {
-		JFrame janela;
+		private JFrame janela;
+		private ControleVacinas controle;
 		
 		private int bordaX = 20;
 		private int bordaY = 24;
@@ -33,8 +36,9 @@ import javax.swing.JCheckBox;
 		private JComboBox comboboxIntervalo;
 		
 
-		public FormularioCadVacina(JFrame janela) {
+		public FormularioCadVacina(JFrame janela, ControleVacinas controle) {
 			this.janela = janela;
+			this.controle = controle;
 		}
 		
 		//trata eventos de ação 
@@ -79,8 +83,22 @@ import javax.swing.JCheckBox;
 			construirCheckBoxRevacina(janela);
 			construirCaixaPeriodo(janela);
 			construirComboBoxIntervalo(janela);
+			
+			if(controle.GetVacinaSelecionada() != null) {
+				preencherCampos(controle.GetVacinaSelecionada());
+			}
 		}
 		
+		private void preencherCampos(Vacina vacina) {
+			caixaDeTextoNome.setText(vacina.getNomeDaVacina());
+			caixaDeTextoLab.setText(vacina.getLaboratorio());
+			digitarData.setText(vacina.getData());
+			digitarLote.setText(vacina.getLote());
+			caixaDeTextoPer.setText(Integer.toString(vacina.getPeriodo()));
+			comboboxIntervalo.setSelectedItem(vacina.getIntervalo());
+			checkboxRevacina.setSelected(vacina.getRevacina());
+		}
+
 		private void construirCaixaDoNome(JFrame janela) {
 			JLabel nome = new JLabel("Nome da vacina:"); 
 			nome.setBounds(bordaX, bordaY + 170, 160, 30);

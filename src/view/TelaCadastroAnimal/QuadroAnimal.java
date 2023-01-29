@@ -51,7 +51,7 @@ public class QuadroAnimal implements ActionListener {
 	}
 	
 	private void construirFormulario(JFrame janela) {
-		formularioAnimal = new FormularioCadAnimal(janela);
+		formularioAnimal = new FormularioCadAnimal(janela, controle);
 		formularioAnimal.construir();
 	}
 	

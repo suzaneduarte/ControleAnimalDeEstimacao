@@ -107,4 +107,8 @@ public class Vacina {
 		this.intervalo = intervalo;
 	}
 	
+	public boolean getRevacina() {
+		return this.necessitaRevacina;
+	}
+	
 }

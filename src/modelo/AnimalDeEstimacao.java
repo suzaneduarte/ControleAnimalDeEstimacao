@@ -66,6 +66,7 @@ public class AnimalDeEstimacao extends Individuo {
 
 	public void AddVacina(Vacina vacina) {
 		this.vacinas.add(vacina);
+		System.out.println(this.vacinas);
 	} 
 	
 	/**

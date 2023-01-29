@@ -23,7 +23,6 @@ public class Usuario extends Individuo {
 	private String senha;
 	private List<AnimalDeEstimacao> animais = new ArrayList<AnimalDeEstimacao>();
 	
-<<<<<<< HEAD
 	/**
 	 * Usuario
 	 * @param email
@@ -32,12 +31,10 @@ public class Usuario extends Individuo {
 	 * @param nome
 	 * @param nascimento
 	 * @param sexo
+	 * @param senha
 	 */
 	
-	public Usuario(String email, String cpf, String telefone, String nome, String nascimento, Sexo sexo) {
-=======
 	public Usuario(String email, String cpf, String telefone, String nome, String nascimento, Sexo sexo, String senha) {
->>>>>>> c4fbdf8fd9ccf4cb94421ecc2366d89f6eda6f21
 		super(nome, nascimento, sexo);
 		this.email = email;
 		this.cpf = cpf;

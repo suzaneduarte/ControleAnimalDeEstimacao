@@ -3,9 +3,11 @@ package controle;
 import javax.swing.*;
 
 import enumerate.Intervalo;
+import modelo.AnimalDeEstimacao;
 import modelo.Dados;
 import modelo.Vacina;
 import view.TelaCadastro.TelaCadastro;
+import view.TelaDetalhesDoPet.TelaDetalhesDoPet;
 import view.TelaPrincipal.MeusPets;
 import view.TelaVacinas.TelaCadVacina; 
 
@@ -20,10 +22,19 @@ import view.TelaVacinas.TelaCadVacina;
 public class ControleVacinas {
 	private JFrame janela;
 	private Dados dados;
+	private AnimalDeEstimacao animal = null;
+	private Vacina vacina = null;
 	
 	public ControleVacinas (JFrame janela, Dados dados) {
 		this.janela = janela;
 		this.dados = dados;
+	}
+	
+	public ControleVacinas (JFrame janela, Dados dados, AnimalDeEstimacao animal, Vacina vacina) {
+		this.janela = janela;
+		this.dados = dados;
+		this.animal = animal;
+		this.vacina = vacina;
 	}
 
 	/**
@@ -32,8 +43,13 @@ public class ControleVacinas {
 	 */
 	
 	public void Voltar() {
-		new MeusPets(this.dados);
-	    janela.dispose(); //destruindo a tela atual 
+		if(vacina == null && animal == null) {
+			new MeusPets(this.dados);
+			janela.dispose(); //destruindo a tela atual 			
+		} else {
+			new TelaDetalhesDoPet(animal, dados);
+			janela.dispose();
+		}
 	}
 
 	/**
@@ -41,10 +57,33 @@ public class ControleVacinas {
      * Destrói a janela atual
 	 */
 	public void Cadastrar(String nomeDaVacina, String data, String lote, String laboratorio, boolean necessitaRevacina, int periodo, Intervalo intervalo) {
-		Vacina vacina = new Vacina(nomeDaVacina, data, lote, laboratorio, necessitaRevacina, periodo, intervalo);
-		dados.AddVacina(vacina);
+		if (this.vacina != null) {
+			vacina.setNomeDaVacina(nomeDaVacina);
+			vacina.setData(data);
+			vacina.setLote(lote);
+			vacina.setLaboratoro(laboratorio);
+			vacina.setNecessitaRevacina(necessitaRevacina);
+			vacina.setPeriodo(periodo);
+			vacina.setIntervalo(intervalo);
+			
+			new TelaDetalhesDoPet(animal, dados);
+		} else {			
+			Vacina vacina = new Vacina(nomeDaVacina, data, lote, laboratorio, necessitaRevacina, periodo, intervalo);
+			dados.AddVacina(vacina);
+			
+			if(animal != null) {
+				animal.AddVacina(vacina);
+				new TelaDetalhesDoPet(animal, dados);
+			} else {
+				new MeusPets(this.dados);			
+			}
+			
+		}
+		janela.dispose(); //destruindo a tela atual 
 		
-		new MeusPets(this.dados);
-	    janela.dispose(); //destruindo a tela atual 
+	}
+	
+	public Vacina GetVacinaSelecionada() {
+		return this.vacina;
 	}
 }

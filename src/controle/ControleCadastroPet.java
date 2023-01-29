@@ -8,6 +8,7 @@ import modelo.AnimalDeEstimacao;
 import modelo.Dados;
 import modelo.Raca;
 import modelo.Usuario;
+import view.TelaDetalhesDoPet.TelaDetalhesDoPet;
 import view.TelaPrincipal.MeusPets;
 
 /**
@@ -20,10 +21,12 @@ import view.TelaPrincipal.MeusPets;
 public class ControleCadastroPet {
 	private JFrame janela;
 	private Dados dados;
+	private AnimalDeEstimacao animal;
 	
-	public ControleCadastroPet (JFrame janela, Dados dados) {
+	public ControleCadastroPet (JFrame janela, Dados dados, AnimalDeEstimacao animal) {
 		this.janela = janela;
 		this.dados = dados;
+		this.animal = animal;
 	}	
 	
 	/**
@@ -32,7 +35,11 @@ public class ControleCadastroPet {
 	 */
 	
 	public void Voltar() {
-		new MeusPets();
+		if(this.animal != null) {
+			new TelaDetalhesDoPet(animal, dados);
+		} else {			
+			new MeusPets();
+		}
 	    janela.dispose();
 	}
 	
@@ -42,11 +49,26 @@ public class ControleCadastroPet {
 	 */
 	
 	public void Cadastrar(Especie especie, Raca raca, String nome, String nascimento, Sexo sexo) {
-		AnimalDeEstimacao animal = new AnimalDeEstimacao(especie, raca, nome, nascimento, sexo);
-		Usuario usuario = dados.getUsuarioConectado();
-		dados.AddAnimal(animal, usuario);
+		if(this.animal != null) {
+			animal.setEspecie(especie);
+			animal.setRaca(raca);
+			animal.setNome(nome);
+			animal.setNascimento(nascimento);
+			animal.setSexo(sexo);
+			
+			new TelaDetalhesDoPet(animal, dados);
+		} else {			
+			AnimalDeEstimacao animal = new AnimalDeEstimacao(especie, raca, nome, nascimento, sexo);
+			Usuario usuario = dados.getUsuarioConectado();
+			dados.AddAnimal(animal, usuario);
+			
+			new MeusPets(dados);
+		}
 		
-		new MeusPets(dados);
 	    janela.dispose();
+	}
+	
+	public AnimalDeEstimacao getAnimalSelecionado() {
+		return this.animal;
 	}
 }

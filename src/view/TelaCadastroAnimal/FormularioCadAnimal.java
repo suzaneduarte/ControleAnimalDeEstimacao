@@ -13,13 +13,16 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.text.MaskFormatter;
 
+import controle.ControleCadastroPet;
 import enumerate.Especie;
 import enumerate.Intervalo;
 import enumerate.Sexo;
+import modelo.AnimalDeEstimacao;
 import modelo.Raca;
 
 	public class FormularioCadAnimal implements ActionListener {
-		JFrame janela;
+		private JFrame janela;
+		private ControleCadastroPet controle;
 		
 		private int bordaX = 50;
 		private int bordaY = 24;
@@ -33,10 +36,9 @@ import modelo.Raca;
 		private JComboBox comboboxEspecie;
 		private JComboBox<String> caixaSelecionarTamanhoDaPelagem;
 		
-		
-
-		public FormularioCadAnimal(JFrame janela) {
+		public FormularioCadAnimal(JFrame janela, ControleCadastroPet controle) {
 			this.janela = janela;
+			this.controle = controle;
 		}
 		
 		//trata eventos de ação 
@@ -54,8 +56,24 @@ import modelo.Raca;
 			construirCaixaDoTamanhoDaPelagem(janela);
 			construirCaixaDoTemperamento(janela);
 			construirCaixaDoPeso(janela);
+			
+			if(controle.getAnimalSelecionado() != null) {
+				preencherCampos(controle.getAnimalSelecionado());
+			}
 		}
 		
+		private void preencherCampos(AnimalDeEstimacao animal) {
+			caixaDeTextoNome.setText(animal.getNome());
+			digitarRaça.setText(animal.getRaca().getTipoDeRaca());
+			digitarPelagem.setText(animal.getRaca().getPelagem());
+			digitarPeso.setText(Double.toString(animal.getRaca().getPeso()));
+			digitarDatanasc.setText(animal.getNascimento());
+			digitarTemperamento.setText(animal.getRaca().getTemperamento());
+			caixaSelecionarSexo.setSelectedItem(animal.getSexo());
+			comboboxEspecie.setSelectedItem(animal.getEspecie());
+			caixaSelecionarTamanhoDaPelagem.setSelectedIndex(animal.getRaca().isTamanhoDaPelagem() ? 0 : 1);
+		}
+
 		public String getNome() {
 			return this.caixaDeTextoNome.getText();
 		}
@@ -70,7 +88,7 @@ import modelo.Raca;
 						this.digitarRaça.getText(),
 						this.digitarPelagem.getText(),
 						this.caixaSelecionarTamanhoDaPelagem.getSelectedIndex() == 0,
-						Integer.parseInt(this.digitarPeso.getText()),
+						Double.parseDouble(this.digitarPeso.getText()),
 						this.digitarTemperamento.getText()
 					);
 			return raca;

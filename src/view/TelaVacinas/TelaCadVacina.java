@@ -12,7 +12,9 @@ import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
 
 import controle.*;
+import modelo.AnimalDeEstimacao;
 import modelo.Dados;
+import modelo.Vacina;
 import view.TelaCadastroAnimal.QuadroAnimal;
 import view.TelaVacinas.TelaCadVacina;
 
@@ -21,9 +23,24 @@ public class TelaCadVacina implements ActionListener {
 	private static JFrame telacadastrovacina = new JFrame("Cadastre uma vacina!"); 
 	private Dados dados;
 	private ControleVacinas controle;
+	private AnimalDeEstimacao animal = null;
+	private Vacina vacina = null;
 		
 	public TelaCadVacina(Dados dados) { //caso venha de outra tela (com parâmetro)
 		this.dados = dados;
+		Inicializar();
+	}
+	
+	public TelaCadVacina(Dados dados, AnimalDeEstimacao animal) { //caso venha de outra tela (com parâmetro)
+		this.dados = dados;
+		this.animal = animal;
+		Inicializar();
+	}
+	
+	public TelaCadVacina(Dados dados, AnimalDeEstimacao animal, Vacina vacina) { //caso venha de outra tela (com parâmetro)
+		this.dados = dados;
+		this.animal = animal;
+		this.vacina = vacina;
 		Inicializar();
 	}
 	
@@ -33,7 +50,7 @@ public class TelaCadVacina implements ActionListener {
 	}
 	
 	private void Inicializar() {
-		controle = new ControleVacinas(telacadastrovacina, dados);
+		controle = new ControleVacinas(telacadastrovacina, dados, animal, vacina);
 		telacadastrovacina.setLayout(null);
 
 		telacadastrovacina.setSize(520, 650); 

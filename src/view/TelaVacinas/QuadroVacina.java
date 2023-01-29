@@ -51,7 +51,7 @@ public class QuadroVacina implements ActionListener {
 	}
 	
 	private void construirFormulario(JFrame janela) {
-		formulario = new FormularioCadVacina(janela);
+		formulario = new FormularioCadVacina(janela, controle);
 		formulario.construir();
 	}
 	

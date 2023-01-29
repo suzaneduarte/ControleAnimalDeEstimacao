@@ -11,6 +11,8 @@ import controle.ControleMeusPets;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.*;
 
@@ -46,7 +48,6 @@ public class Tabela implements ListSelectionListener, DocumentListener {
 	}
 	
 	public void ConstruirTabela() {		
-		listaPets.setBounds(59, 57, 150, 150);
 		listaPets.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 		listaPets.setVisibleRowCount(2); //linhas visiveis
 
@@ -54,10 +55,16 @@ public class Tabela implements ListSelectionListener, DocumentListener {
 		listaPets.setOpaque(false);
 		listaPets.setBackground(new Color(0, 0, 0, 0));
 		listaPets.setListData(controle.GerarListaDePets(""));
+		
+		listaPets.addMouseListener(new MouseAdapter() {
+		    public void mouseClicked(MouseEvent evt) {
+		        controle.detalhesDoPet(listaPets.getSelectedIndex());
+		    }
+		});
 
 		// Adiciona a lista à janela
 	    JScrollPane scroll = new JScrollPane(listaPets);
-	    scroll.setBounds(10, 49, 250, 440);  
+	    scroll.setBounds(10, 49, 250, 440);
 
 	    scroll.setVisible(true);
 		

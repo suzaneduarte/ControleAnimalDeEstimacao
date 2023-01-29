@@ -6,18 +6,10 @@ import javax.swing.*;
 import controle.ControleMeusPets;
 import view.TelaCadastro.*;
 
-//import java.awt.image.BufferedImage;
-//import java.io.File;
-//import javax.imageio.ImageIO;
-//import java.io.IOException;
-
 public class Menu implements ActionListener {	
 	private JFrame janela;
 	private ControleMeusPets controle;
 	private JButton meuspets, vacinas, minhaconta;
-	
-	private int bordaX = 24;
-	private int bordaY = 24;
 	
 	public Menu(JFrame janela, ControleMeusPets controle) {
 		this.janela = janela;
