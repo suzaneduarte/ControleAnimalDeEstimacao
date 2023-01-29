@@ -110,7 +110,7 @@ import modelo.Raca;
 			
 			caixaDeTextoNome = new JTextField(20); 
 			caixaDeTextoNome.setActionCommand("myTF");
-			caixaDeTextoNome.setBounds(bordaX + 180, bordaY + 150, 180, 20);
+			caixaDeTextoNome.setBounds(bordaX + 192, bordaY + 150, 180, 20);
 			caixaDeTextoNome.addActionListener(this);
 			
 			janela.add(caixaDeTextoNome);
@@ -124,7 +124,7 @@ import modelo.Raca;
 			sexo.setFont(new Font("Arial", Font.BOLD, 14));
 			String[] sexosStrings = {"MASCULINO", "FEMININO", "OUTRO"}; //opções de sexo
 			caixaSelecionarSexo = new JComboBox<Object>(sexosStrings);
-			caixaSelecionarSexo.setBounds(bordaX + 180, bordaY + 186, 180, 20);
+			caixaSelecionarSexo.setBounds(bordaX + 192, bordaY + 186, 180, 20);
 			
 			janela.add(sexo);
 			janela.add(caixaSelecionarSexo);
@@ -136,7 +136,7 @@ import modelo.Raca;
 			raça.setFont(new Font("Arial", Font.BOLD, 14));
 			
 			digitarRaça = new JTextField(11);
-			digitarRaça.setBounds(bordaX + 180, bordaY + 222, 180, 20);
+			digitarRaça.setBounds(bordaX + 192, bordaY + 222, 180, 20);
 			
 			janela.add(raça);
 			janela.add(digitarRaça);
@@ -149,7 +149,7 @@ import modelo.Raca;
 			pelagem.setFont(new Font("Arial", Font.BOLD, 14));
 			
 			digitarPelagem = new JTextField(11);
-			digitarPelagem.setBounds(bordaX + 180, bordaY + 258, 180, 20);
+			digitarPelagem.setBounds(bordaX + 192, bordaY + 258, 180, 20);
 			
 			janela.add(pelagem);
 			janela.add(digitarPelagem);
@@ -162,7 +162,7 @@ import modelo.Raca;
 			
 			String[] tamanhosDaPelagem = {"Pelagem curta", "Pelagem média/longa"}; //opções de pelagem
 			caixaSelecionarTamanhoDaPelagem = new JComboBox<String>(tamanhosDaPelagem);
-			caixaSelecionarTamanhoDaPelagem.setBounds(bordaX + 180, bordaY + 294, 180, 20);
+			caixaSelecionarTamanhoDaPelagem.setBounds(bordaX + 192, bordaY + 294, 180, 20);
 			
 			janela.add(pelagem);
 			janela.add(caixaSelecionarTamanhoDaPelagem);
@@ -174,7 +174,7 @@ import modelo.Raca;
 			peso.setFont(new Font("Arial", Font.BOLD, 14));
 			
 			digitarPeso = new JTextField(11);
-			digitarPeso.setBounds(bordaX + 180, bordaY + 330, 180, 20);
+			digitarPeso.setBounds(bordaX + 192, bordaY + 330, 180, 20);
 			
 			janela.add(peso);
 			janela.add(digitarPeso);
@@ -182,11 +182,11 @@ import modelo.Raca;
 		
 		private void construirCaixaDoTemperamento(JFrame janela) {
 			JLabel temperamento = new JLabel ("Temperamento da raça:"); 
-			temperamento.setBounds(bordaX, bordaY + 366, 170, 20);
+			temperamento.setBounds(bordaX, bordaY + 366, 190, 20);
 			temperamento.setFont(new Font("Arial", Font.BOLD, 14));
 			
 			digitarTemperamento = new JTextField(11);
-			digitarTemperamento.setBounds(bordaX + 180, bordaY + 366, 180, 20);
+			digitarTemperamento.setBounds(bordaX + 192, bordaY + 366, 180, 20);
 			
 			janela.add(temperamento);
 			janela.add(digitarTemperamento);
@@ -199,7 +199,7 @@ import modelo.Raca;
 			
 			String[] especiesStrings = {"CANINO", "FELINO", "AVE", "ROEDOR"}; //opções de sexo
 			comboboxEspecie = new JComboBox(especiesStrings);
-			comboboxEspecie.setBounds(bordaX + 180, bordaY + 402, 180, 20);
+			comboboxEspecie.setBounds(bordaX + 192, bordaY + 402, 180, 20);
 			comboboxEspecie.setOpaque(false);
 			janela.add(comboboxEspecie);
 			janela.add(especie);	
@@ -211,7 +211,7 @@ import modelo.Raca;
 			datanasc.setFont(new Font("Arial", Font.BOLD, 14));
 			
 			digitarDatanasc = new JTextField(10);
-			digitarDatanasc.setBounds(bordaX + 180, bordaY + 438, 180, 20);
+			digitarDatanasc.setBounds(bordaX + 192, bordaY + 438, 180, 20);
 			
 			janela.add(datanasc);
 			janela.add(digitarDatanasc);		

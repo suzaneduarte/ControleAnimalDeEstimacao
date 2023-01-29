@@ -76,7 +76,7 @@ public class Vacina {
 		return laboratorio;
 	}
 	
-	public void setLaboratoro(String laboratorio) {
+	public void setLaboratorio(String laboratorio) {
 		this.laboratorio = laboratorio;
 	}
 	
