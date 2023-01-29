@@ -1,10 +1,20 @@
 package modelo;
 
 import java.util.ArrayList;
+
+
 import java.util.Date;
 import java.util.List;
 
 import enumerate.Sexo;
+
+/**
+*  Classe Usuário contem informações sobre o Usuario
+*  @author Gabriel Evaristo e Suzane Alves
+*  @since 2023
+*  @version 1.0
+*/
+
 
 public class Usuario extends Individuo { 
 	private String email;
@@ -13,7 +23,21 @@ public class Usuario extends Individuo {
 	private String senha;
 	private List<AnimalDeEstimacao> animais = new ArrayList<AnimalDeEstimacao>();
 	
+<<<<<<< HEAD
+	/**
+	 * Usuario
+	 * @param email
+	 * @param cpf
+	 * @param telefone
+	 * @param nome
+	 * @param nascimento
+	 * @param sexo
+	 */
+	
+	public Usuario(String email, String cpf, String telefone, String nome, String nascimento, Sexo sexo) {
+=======
 	public Usuario(String email, String cpf, String telefone, String nome, String nascimento, Sexo sexo, String senha) {
+>>>>>>> c4fbdf8fd9ccf4cb94421ecc2366d89f6eda6f21
 		super(nome, nascimento, sexo);
 		this.email = email;
 		this.cpf = cpf;
@@ -66,6 +90,10 @@ public class Usuario extends Individuo {
 	public void DeleteAnimal(AnimalDeEstimacao animal) {
 		this.animais.remove(animal);
 	}
+	
+	/**
+	 * Método que printa informações do Usuario
+	 */
 	
 	public String toString() {
 		StringBuilder stringb = new StringBuilder();

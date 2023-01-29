@@ -6,6 +6,12 @@ import enumerate.Sexo;
 import enumerate.Especie;
 import enumerate.Intervalo;
 
+/**
+ *  Classe Dados cria um Banco de Dados
+ *  @author Gabriel Evaristo e Suzane Alves
+ *  @since 2023
+ *  @version 1.0
+ */
 
 public class Dados {
 	private List<Vacina> vacinas = new ArrayList<Vacina>();
@@ -16,6 +22,10 @@ public class Dados {
 	public Dados() {
 		cadastrosProntos();
 	}
+	
+	/**
+	 * Cria o banco de dados pronto para o teste
+	 */
 	
 	public void cadastrosProntos() {
 		// Usuario 1

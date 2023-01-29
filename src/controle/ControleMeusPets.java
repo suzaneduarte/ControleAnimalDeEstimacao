@@ -42,7 +42,7 @@ public class ControleMeusPets {
 	 * Cria uma lista de Animais através da função getAnimaisDeUsuário
 	 * @param filtro
 	 * O for procura o animal com o correspondente caracter digitado
-	 * @return Lista dos pets com o correspondente caracter digitado
+	 * @return String[]
 	 */
 	
 	public String[] GerarListaDePets(String filtro) {

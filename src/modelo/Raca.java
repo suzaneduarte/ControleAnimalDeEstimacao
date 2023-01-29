@@ -1,5 +1,13 @@
 package modelo;
 
+
+/**
+*  Classe Raça contem informações sobre a Raça
+*  @author Gabriel Evaristo e Suzane Alves
+*  @since 2023
+*  @version 1.0
+*/
+
 public class Raca {
 	private String tipoDeRaca;
 	private String pelagem;
@@ -7,6 +15,15 @@ public class Raca {
 	private double peso;
 	private String temperamento;
 
+	/**
+	 * Raça	
+	 * @param tipoDeRaca
+	 * @param pelagem
+	 * @param tamanhoDaPelagem
+	 * @param peso
+	 * @param temperamento
+	 */
+	
 	public Raca(String tipoDeRaca, String pelagem, boolean tamanhoDaPelagem, double peso, String temperamento) {
 		this.tipoDeRaca = tipoDeRaca;
 		this.pelagem = pelagem;
@@ -59,6 +76,10 @@ public class Raca {
 	public void setTemperamento(String temperamento) {
 		this.temperamento = temperamento;
 	}
+	
+	/**
+	 * Método para printar informações sobre a Raça
+	 */
 
 	public String toString() {
 		StringBuilder stringb = new StringBuilder();

@@ -4,6 +4,14 @@ import enumerate.Intervalo;
 
 import java.util.Date;
 
+/**
+*  Classe Vacina contem informações sobre a Vacina
+*  @author Gabriel Evaristo e Suzane Alves
+*  @since 2023
+*  @version 1.0
+*/
+
+
 public class Vacina {
 	private String nomeDaVacina;
 	private String data;
@@ -12,6 +20,17 @@ public class Vacina {
 	private boolean necessitaRevacina;
 	private int periodo;
 	private Intervalo intervalo;
+	
+	/**
+	 * Vacina
+	 * @param nomeDaVacina
+	 * @param data
+	 * @param lote
+	 * @param laboratorio
+	 * @param necessitaRevacina
+	 * @param periodo
+	 * @param intervalo
+	 */
     
 	public Vacina(String nomeDaVacina, String data, String lote, String laboratorio, boolean necessitaRevacina, int periodo, Intervalo intervalo) {
 		this.nomeDaVacina = nomeDaVacina;
