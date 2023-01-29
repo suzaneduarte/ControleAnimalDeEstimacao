@@ -61,7 +61,7 @@ public class ControleVacinas {
 			vacina.setNomeDaVacina(nomeDaVacina);
 			vacina.setData(data);
 			vacina.setLote(lote);
-			vacina.setLaboratoro(laboratorio);
+			vacina.setLaboratorio(laboratorio);
 			vacina.setNecessitaRevacina(necessitaRevacina);
 			vacina.setPeriodo(periodo);
 			vacina.setIntervalo(intervalo);

@@ -29,7 +29,6 @@ import modelo.Raca;
 		private JTextField caixaDeTextoNome;
 		private JTextField digitarRaça;
 		private JTextField digitarPelagem;
-		private JTextField digitarPeso;
 		private JTextField digitarDatanasc;
 		private JTextField digitarTemperamento;
 		private JComboBox<Object> caixaSelecionarSexo;
@@ -55,7 +54,6 @@ import modelo.Raca;
 			construirCaixaDoDataNasc(janela);
 			construirCaixaDoTamanhoDaPelagem(janela);
 			construirCaixaDoTemperamento(janela);
-			construirCaixaDoPeso(janela);
 			
 			if(controle.getAnimalSelecionado() != null) {
 				preencherCampos(controle.getAnimalSelecionado());
@@ -66,7 +64,6 @@ import modelo.Raca;
 			caixaDeTextoNome.setText(animal.getNome());
 			digitarRaça.setText(animal.getRaca().getTipoDeRaca());
 			digitarPelagem.setText(animal.getRaca().getPelagem());
-			digitarPeso.setText(Double.toString(animal.getRaca().getPeso()));
 			digitarDatanasc.setText(animal.getNascimento());
 			digitarTemperamento.setText(animal.getRaca().getTemperamento());
 			caixaSelecionarSexo.setSelectedItem(animal.getSexo());
@@ -88,7 +85,6 @@ import modelo.Raca;
 						this.digitarRaça.getText(),
 						this.digitarPelagem.getText(),
 						this.caixaSelecionarTamanhoDaPelagem.getSelectedIndex() == 0,
-						Double.parseDouble(this.digitarPeso.getText()),
 						this.digitarTemperamento.getText()
 					);
 			return raca;
@@ -166,18 +162,6 @@ import modelo.Raca;
 			
 			janela.add(pelagem);
 			janela.add(caixaSelecionarTamanhoDaPelagem);
-		}
-		
-		private void construirCaixaDoPeso(JFrame janela) {
-			JLabel peso = new JLabel ("Peso:"); 
-			peso.setBounds(bordaX, bordaY + 330, 170, 20);
-			peso.setFont(new Font("Arial", Font.BOLD, 14));
-			
-			digitarPeso = new JTextField(11);
-			digitarPeso.setBounds(bordaX + 192, bordaY + 330, 180, 20);
-			
-			janela.add(peso);
-			janela.add(digitarPeso);
 		}
 		
 		private void construirCaixaDoTemperamento(JFrame janela) {

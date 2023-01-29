@@ -32,7 +32,7 @@ public class Dados {
 		// Usuario 1
 		Usuario usuario0 = new Usuario("felipeosorio@gmail.com", "052.859.111-22", "617777-8888",
 				"Felipe Osório de Oliveira", "07/02/1996", Sexo.MASCULINO, "123456");
-		Raca raca0 = new Raca("Vira Lata", "Pelo enrolado", true, 15.50, "Extrovertido");
+		Raca raca0 = new Raca("Vira Lata", "Pelo enrolado", true, "Extrovertido");
 		Vacina vacina0 = new Vacina("V12", "14/01/2023", "01", "Farmaceutica Canina", true, 10, Intervalo.ANO);
 		AnimalDeEstimacao animal0 = new AnimalDeEstimacao(Especie.CANINO, raca0, "Juca", "10/08/2021", Sexo.MASCULINO);
 
