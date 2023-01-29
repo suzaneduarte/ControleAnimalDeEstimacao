@@ -10,13 +10,15 @@ public class Usuario extends Individuo {
 	private String email;
 	private String cpf;
 	private String telefone;
+	private String senha;
 	private List<AnimalDeEstimacao> animais = new ArrayList<AnimalDeEstimacao>();
 	
-	public Usuario(String email, String cpf, String telefone, String nome, String nascimento, Sexo sexo) {
+	public Usuario(String email, String cpf, String telefone, String nome, String nascimento, Sexo sexo, String senha) {
 		super(nome, nascimento, sexo);
 		this.email = email;
 		this.cpf = cpf;
 		this.telefone = telefone;
+		this.setSenha(senha);
 	}
 
 
@@ -37,13 +39,20 @@ public class Usuario extends Individuo {
 		this.cpf = cpf;
 	}
 
-
     public String getTelefone() {
 		return telefone;
 	}
 
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
+	}
+	
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
 	
 	public List <AnimalDeEstimacao> getAnimaisDeEstimacao() {

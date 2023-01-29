@@ -44,7 +44,7 @@ public class MeusPets implements ActionListener {
 			janela.setSize(500, 600); 
 			janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
 //
-			Menu menu = new Menu(janela);
+			Menu menu = new Menu(janela, controle);
 			menu.construir(); // Chama o construir da classe Menu 
 			
 			this.construir(); // Chama o construir da classe Meus Pets 
