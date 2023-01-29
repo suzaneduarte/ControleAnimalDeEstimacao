@@ -1,16 +1,35 @@
 package modelo;
 
 import java.util.ArrayList;
+
+
 import java.util.Date;
 import java.util.List;
 
 import enumerate.Especie;
 import enumerate.Sexo;
 
+
+/**
+ *  Classe AnimalDeEstimação contem informações sobre o pet
+ *  @author Gabriel Evaristo e Suzane Alves
+ *  @since 2023
+ *  @version 1.0
+ */
+
 public class AnimalDeEstimacao extends Individuo { 
 	private Especie especie;
 	private Raca raca;
 	private List<Vacina> vacinas = new ArrayList<Vacina>();
+	
+	/**
+	 * Informações do pet
+	 * @param especie
+	 * @param raca
+	 * @param nome
+	 * @param nascimento
+	 * @param sexo
+	 */
 
 	public AnimalDeEstimacao(Especie especie, Raca raca, String nome, String nascimento, Sexo sexo) {
 		super(nome, nascimento, sexo);
@@ -39,14 +58,29 @@ public class AnimalDeEstimacao extends Individuo {
 	public List <Vacina> getVacinas() {
 		return vacinas;
 	}
+	
+	/**
+	 * Método onde se adiciona a vacina
+	 * @param vacina
+	 */
 
 	public void AddVacina(Vacina vacina) {
 		this.vacinas.add(vacina);
 	} 
 	
+	/**
+	 * Método onde se remove a vacina
+	 * @param vacina
+	 */
+	
 	public void DeleteVacina(Vacina vacina) {
 		this.vacinas.remove(vacina);
 	}
+	
+	
+	/**
+	 * Método para printar as informções do pet 
+	 */
 	
 	public String toString() {
 		StringBuilder stringb = new StringBuilder();
