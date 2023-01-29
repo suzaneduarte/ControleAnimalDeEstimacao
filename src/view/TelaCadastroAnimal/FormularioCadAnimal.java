@@ -166,11 +166,11 @@ import modelo.Raca;
 		
 		private void construirCaixaDoTemperamento(JFrame janela) {
 			JLabel temperamento = new JLabel ("Temperamento da raça:"); 
-			temperamento.setBounds(bordaX, bordaY + 366, 190, 20);
+			temperamento.setBounds(bordaX, bordaY + 330, 190, 20);
 			temperamento.setFont(new Font("Arial", Font.BOLD, 14));
 			
 			digitarTemperamento = new JTextField(11);
-			digitarTemperamento.setBounds(bordaX + 192, bordaY + 366, 180, 20);
+			digitarTemperamento.setBounds(bordaX + 192, bordaY + 330, 180, 20);
 			
 			janela.add(temperamento);
 			janela.add(digitarTemperamento);
@@ -178,12 +178,12 @@ import modelo.Raca;
 		
 		private void construirCaixaDaEspecie(JFrame janela) {
 			JLabel especie = new JLabel ("Especie:");
-			especie.setBounds(bordaX, bordaY + 402, 170, 20);
+			especie.setBounds(bordaX, bordaY + 366, 170, 20);
 			especie.setFont(new Font("Arial", Font.BOLD, 14));
 			
 			String[] especiesStrings = {"CANINO", "FELINO", "AVE", "ROEDOR"}; //opções de sexo
 			comboboxEspecie = new JComboBox(especiesStrings);
-			comboboxEspecie.setBounds(bordaX + 192, bordaY + 402, 180, 20);
+			comboboxEspecie.setBounds(bordaX + 192, bordaY + 366, 180, 20);
 			comboboxEspecie.setOpaque(false);
 			janela.add(comboboxEspecie);
 			janela.add(especie);	
@@ -191,11 +191,11 @@ import modelo.Raca;
 		
 		private void construirCaixaDoDataNasc(JFrame janela) {
 			JLabel datanasc = new JLabel ("Data Nascimento:"); //rótulo só com texto
-			datanasc.setBounds(bordaX, bordaY + 438, 170, 20);
+			datanasc.setBounds(bordaX, bordaY + 402, 170, 20);
 			datanasc.setFont(new Font("Arial", Font.BOLD, 14));
 			
 			digitarDatanasc = new JTextField(10);
-			digitarDatanasc.setBounds(bordaX + 192, bordaY + 438, 180, 20);
+			digitarDatanasc.setBounds(bordaX + 192, bordaY + 402, 180, 20);
 			
 			janela.add(datanasc);
 			janela.add(digitarDatanasc);		
