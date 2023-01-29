@@ -1,4 +1,4 @@
-package controle;
+package controle;a
 
 import java.util.*;
 
@@ -25,6 +25,10 @@ public class ControleCadastro {
 		this.dados = dados;
 	}	
 	
+	public ControleCadastro() {
+		// TODO Auto-generated constructor stub
+	}
+
 	/**
 	 * Verifica se a senha e a confirmação da senha são iguais
 	 * Cria um novo usuário com as informações do formulário
@@ -54,4 +58,43 @@ public class ControleCadastro {
 		return false;
 	}
 	
+	/**
+	 * Teste Unitario do CPF
+	 * @param valor
+	 * @return
+	 */
+	
+	public static boolean testeCpf(String valor) {
+		if(valor.matches("[0-9]+")) 
+			return true;
+		else 
+			return false;
+	}
+	
+	/**
+	 * Teste Unitario do Telefone
+	 * @param valor
+	 * @return
+	 */
+	
+	public static boolean testeTelefone(String valor) {
+		if(valor.matches("[0-9]+")) 
+			return true;
+		else 
+			return false;
+	}
+	
+	/**
+	 * Teste Unitario do Nome
+	 * @param nomeNomeCorreto
+	 * @param nome
+	 * @return
+	 */
+	
+	public static boolean testeNome(String nomeNomeCorreto, String nome) {
+		if(nomeNomeCorreto == nome)
+			return true;
+		else
+			return false;
+	}
 }
