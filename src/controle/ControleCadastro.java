@@ -31,7 +31,7 @@ public class ControleCadastro {
 	 * Chama a tela MeusPets
      * Destrói a janela atual
 	 */
-	public void Cadastrar(
+	public boolean Cadastrar(
 			String email,
 			String cpf,
 			String telefone,
@@ -47,9 +47,11 @@ public class ControleCadastro {
 			
 			new MeusPets();
 			janela.dispose();
-		} else {
 			
+			return true;
 		}
+		
+		return false;
 	}
 	
 }

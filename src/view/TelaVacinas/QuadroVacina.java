@@ -19,15 +19,19 @@ public class QuadroVacina implements ActionListener {
 	private ControleVacinas controle;
 	private int bordaX = 24;
 	private int bordaY = 24;
+	private FormularioCadVacina formulario;
 	
 	public QuadroVacina(JFrame janela, ControleVacinas controle) {
 		this.janela = janela;
 		this.controle = controle;
 	}
 	
-	//trata eventos de ação 
 	public void actionPerformed(ActionEvent ae) {
-	
+		if ("voltar" == ae.getActionCommand()) {
+	        controle.Voltar();
+	    } else if("cadastrar" == ae.getActionCommand()) {
+	    	controle.Cadastrar(formulario.getNome(), formulario.getData(), formulario.getLote(), formulario.getLaboratorio(), formulario.getRevacina(), formulario.getPeriodo(), formulario.getIntervalo());
+	    }
 	}
 	
 	public void construir() {
@@ -47,7 +51,7 @@ public class QuadroVacina implements ActionListener {
 	}
 	
 	private void construirFormulario(JFrame janela) {
-		FormularioCadVacina formulario = new FormularioCadVacina(janela);
+		formulario = new FormularioCadVacina(janela);
 		formulario.construir();
 	}
 	

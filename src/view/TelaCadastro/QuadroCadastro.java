@@ -33,7 +33,7 @@ public class QuadroCadastro implements ActionListener {
 		if ("voltar" == ae.getActionCommand()) {
 	        
 	    } else if("cadastrar" == ae.getActionCommand()) {
-	    	controle.Cadastrar(
+	    	boolean ok = controle.Cadastrar(
 	    			formularioCadastro.getEmail(),
 	    			formularioCadastro.getCpf(),
 	    			formularioCadastro.getTelefone(),
@@ -43,6 +43,10 @@ public class QuadroCadastro implements ActionListener {
 	    			formularioCadastro.getSenha(),
 	    			formularioCadastro.getConfirmarSenha()
 	    		);
+	    	
+	    	if(!ok) {
+	    		formularioCadastro.mostrarErro();
+	    	}
 	    }
 	}
 	
@@ -55,7 +59,7 @@ public class QuadroCadastro implements ActionListener {
 	private void construirTitulo(JFrame janela) {
 		JLabel titulo = new JLabel("Cadastre-se!");
 		
-		titulo.setBounds(bordaX + 50, bordaY, 400, 90); 
+		titulo.setBounds(bordaX + 50, 0, 400, 90); 
 		titulo.setFont(new Font("Arial", Font.BOLD, 35));
 		titulo.setForeground(Color.DARK_GRAY);
 		
@@ -70,7 +74,7 @@ public class QuadroCadastro implements ActionListener {
 	private void construirBotoes(JFrame janela) {
 		JButton botaoCadastrar = new JButton("Cadastrar");
 		
-		botaoCadastrar.setBounds(bordaX + 140, bordaY + 378, 120, 20);
+		botaoCadastrar.setBounds(bordaX + 140, bordaY + 400, 120, 20);
 		botaoCadastrar.setActionCommand("cadastrar");
 		botaoCadastrar.addActionListener(this);
 		

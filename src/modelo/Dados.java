@@ -54,6 +54,15 @@ public class Dados {
 		return usuarioConectado;
 	}
 	
+	public void AddVacina(Vacina vacina) {
+		this.vacinas.add(vacina);
+	}
+	
+	public void AddAnimal(AnimalDeEstimacao animal, Usuario usuario) {
+		this.animais.add(animal);
+		usuario.AddAnimal(animal);
+	}
+	
 	public List<AnimalDeEstimacao> getAnimaisDeUsuario() {
 		return usuarioConectado.getAnimaisDeEstimacao();
 	}

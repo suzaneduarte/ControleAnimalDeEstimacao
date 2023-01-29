@@ -6,7 +6,6 @@ public class Raca {
 	private boolean tamanhoDaPelagem;
 	private double peso;
 	private String temperamento;
-	
 
 	public Raca(String tipoDeRaca, String pelagem, boolean tamanhoDaPelagem, double peso, String temperamento) {
 		this.tipoDeRaca = tipoDeRaca;
@@ -15,7 +14,6 @@ public class Raca {
 		this.peso = peso;
 		this.temperamento = temperamento;
 	}
-
 
     // getters and setters
 	public String getTipoDeRaca() {

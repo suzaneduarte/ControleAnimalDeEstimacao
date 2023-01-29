@@ -18,6 +18,7 @@ public class QuadroAnimal implements ActionListener {
 	private ControleCadastroPet controle;
 	private int bordaX = 24;
 	private int bordaY = 24;
+	FormularioCadAnimal formularioAnimal;
 	
 	public QuadroAnimal(JFrame janela, ControleCadastroPet controle) {
 		this.janela = janela;
@@ -29,7 +30,7 @@ public class QuadroAnimal implements ActionListener {
 		if ("voltar" == ae.getActionCommand()) {
 	        controle.Voltar();
 	    } else if("cadastrar" == ae.getActionCommand()) {
-	    	controle.Cadastrar();
+	    	controle.Cadastrar(formularioAnimal.getEspecie(), formularioAnimal.getRaca(), formularioAnimal.getNome(), formularioAnimal.getDataNasc(), formularioAnimal.getSexo() );
 	    }
 	}
 	
@@ -50,19 +51,19 @@ public class QuadroAnimal implements ActionListener {
 	}
 	
 	private void construirFormulario(JFrame janela) {
-		FormularioCadAnimal formularioLogin = new FormularioCadAnimal(janela);
-		formularioLogin.construir();
+		formularioAnimal = new FormularioCadAnimal(janela);
+		formularioAnimal.construir();
 	}
 	
 	private void construirBotoes(JFrame janela) {
 		JButton botaoVoltar = new JButton("Voltar");
 		JButton botaoCadastrar = new JButton("Cadastrar");
 		
-		botaoVoltar.setBounds(bordaX + 80, bordaY + 420, 120, 20);
+		botaoVoltar.setBounds(bordaX + 80, bordaY + 490, 120, 20);
 		botaoVoltar.setActionCommand("voltar");
 		botaoVoltar.addActionListener(this);
 		
-		botaoCadastrar.setBounds(bordaX + 224, bordaY + 420, 120, 20);
+		botaoCadastrar.setBounds(bordaX + 224, bordaY + 490, 120, 20);
 		botaoCadastrar.setActionCommand("cadastrar");
 		botaoCadastrar.addActionListener(this);
 		

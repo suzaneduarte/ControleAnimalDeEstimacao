@@ -2,6 +2,12 @@ package controle;
 
 import javax.swing.JFrame;
 
+import enumerate.Especie;
+import enumerate.Sexo;
+import modelo.AnimalDeEstimacao;
+import modelo.Dados;
+import modelo.Raca;
+import modelo.Usuario;
 import view.TelaPrincipal.MeusPets;
 
 /**
@@ -13,9 +19,11 @@ import view.TelaPrincipal.MeusPets;
 
 public class ControleCadastroPet {
 	private JFrame janela;
+	private Dados dados;
 	
-	public ControleCadastroPet (JFrame janela) {
+	public ControleCadastroPet (JFrame janela, Dados dados) {
 		this.janela = janela;
+		this.dados = dados;
 	}	
 	
 	/**
@@ -33,8 +41,12 @@ public class ControleCadastroPet {
      * Destrói a janela atual
 	 */
 	
-	public void Cadastrar() {
-		new MeusPets();
+	public void Cadastrar(Especie especie, Raca raca, String nome, String nascimento, Sexo sexo) {
+		AnimalDeEstimacao animal = new AnimalDeEstimacao(especie, raca, nome, nascimento, sexo);
+		Usuario usuario = dados.getUsuarioConectado();
+		dados.AddAnimal(animal, usuario);
+		
+		new MeusPets(dados);
 	    janela.dispose();
 	}
 }

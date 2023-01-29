@@ -20,7 +20,7 @@ import view.TelaVacinas.TelaCadVacina;
 public class TelaCadVacina implements ActionListener {
 	private static JFrame telacadastrovacina = new JFrame("Cadastre uma vacina!"); 
 	private Dados dados;
-	private ControleVacinas controle = new ControleVacinas(telacadastrovacina, dados);
+	private ControleVacinas controle;
 		
 	public TelaCadVacina(Dados dados) { //caso venha de outra tela (com parâmetro)
 		this.dados = dados;
@@ -33,9 +33,11 @@ public class TelaCadVacina implements ActionListener {
 	}
 	
 	private void Inicializar() {
+		controle = new ControleVacinas(telacadastrovacina, dados);
 		telacadastrovacina.setLayout(null);
 
 		telacadastrovacina.setSize(520, 650); 
+		telacadastrovacina.setLocationRelativeTo(null);
 		telacadastrovacina.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
 		
 		construirImagemDeFundo();

@@ -35,7 +35,8 @@ import modelo.Dados;
 			controle = new ControleCadastro(telacadastro, dados);
 			telacadastro.setLayout(null);
 
-			telacadastro.setSize(448, 500); //define as dimensões em pixel da janela inicial
+			telacadastro.setSize(448, 510); //define as dimensões em pixel da janela inicial
+			telacadastro.setLocationRelativeTo(null);
 			telacadastro.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //encerra app
 			
 			construirImagemDeFundo();

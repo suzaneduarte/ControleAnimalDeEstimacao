@@ -35,6 +35,7 @@ public class PrimeiraTela implements ActionListener {
 		janelainicial.setLayout(null);
 
 		janelainicial.setSize(448, 320); //define as dimensões em pixel da janela inicial
+		janelainicial.setLocationRelativeTo(null);
 		janelainicial.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //encerra app
 		
 		construirImagemDeFundo();

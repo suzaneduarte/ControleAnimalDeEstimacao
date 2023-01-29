@@ -2,7 +2,9 @@ package controle;
 
 import javax.swing.*;
 
+import enumerate.Intervalo;
 import modelo.Dados;
+import modelo.Vacina;
 import view.TelaCadastro.TelaCadastro;
 import view.TelaPrincipal.MeusPets;
 import view.TelaVacinas.TelaCadVacina; 
@@ -38,9 +40,11 @@ public class ControleVacinas {
 	 * Chama a tela CadastroVacina
      * Destrói a janela atual
 	 */
-	
-	public void Cadastrar() {
-		new TelaCadVacina(this.dados);
+	public void Cadastrar(String nomeDaVacina, String data, String lote, String laboratorio, boolean necessitaRevacina, int periodo, Intervalo intervalo) {
+		Vacina vacina = new Vacina(nomeDaVacina, data, lote, laboratorio, necessitaRevacina, periodo, intervalo);
+		dados.AddVacina(vacina);
+		
+		new MeusPets(this.dados);
 	    janela.dispose(); //destruindo a tela atual 
 	}
 }

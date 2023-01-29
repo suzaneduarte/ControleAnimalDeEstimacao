@@ -1,6 +1,7 @@
 package view.TelaCadastro;
 
-	import java.awt.Font;
+	import java.awt.Color;
+import java.awt.Font;
 	import java.awt.event.ActionEvent;
 	import java.awt.event.ActionListener;
 import java.text.ParseException;
@@ -11,6 +12,7 @@ import javax.swing.JFrame;
 	import javax.swing.JLabel;
 	import javax.swing.JPasswordField;
 	import javax.swing.JTextField;
+import javax.swing.border.LineBorder;
 import javax.swing.text.MaskFormatter;
 
 import enumerate.Sexo;
@@ -21,6 +23,7 @@ import enumerate.Sexo;
 		private int bordaX = 50;
 		private int bordaY = 24;
 		
+		private JTextField caixaDeTextoNome;
 		private JTextField caixaDeTextoEmail;
 		private JTextField caixaDeTextoSenha;
 		private JTextField caixaDeTextoConfirmarSenha;
@@ -37,6 +40,10 @@ import enumerate.Sexo;
 		//trata eventos de ação 
 		public void actionPerformed(ActionEvent ae) {
 			
+		}
+		
+		public String getNome() {
+			return this.caixaDeTextoNome.getText();
 		}
 		
 		public String getEmail() {
@@ -69,6 +76,7 @@ import enumerate.Sexo;
 		}
 		
 		public void construir() {
+			construirCaixaDeTextoNome(janela);
 			construirCaixaDeTexto(janela);
 			construirCaixaDeTextoDeSenha(janela);
 			construirCaixaDeTextoDeConfirmarSenha(janela);
@@ -76,7 +84,19 @@ import enumerate.Sexo;
 			construirCaixaDoTelefone(janela);
 			construirCaixaDoDataNasc(janela);	
 			construirCaixaDeSexo(janela);
+		}
+		
+		private void construirCaixaDeTextoNome(JFrame janela) {
+			JLabel nome = new JLabel("Nome:"); //rótulo só com texto
+			nome.setBounds(bordaX, bordaY + 61, 160, 30);
+			nome.setFont(new Font("Arial", Font.BOLD, 14));
+			caixaDeTextoNome = new JTextField(20); //cria campo de texto com largura de 10 colunas 
+			caixaDeTextoNome.setActionCommand("myTF"); //define os comandos de ação de campo do texto
+			caixaDeTextoNome.setBounds(bordaX + 150, bordaY + 66, 180, 20);
+			caixaDeTextoNome.addActionListener(this);
 			
+			janela.add(caixaDeTextoNome);
+			janela.add(nome);
 		}
 		
 		private void construirCaixaDeTexto(JFrame janela) {
@@ -164,5 +184,10 @@ import enumerate.Sexo;
 			
 			janela.add(sexo);
 			janela.add(caixaSelecionarSexo);
+		}
+
+		public void mostrarErro() {
+			caixaDeTextoSenha.setBorder(new LineBorder(Color.RED,2));
+			caixaDeTextoConfirmarSenha.setBorder(new LineBorder(Color.RED,2));
 		}
 	}

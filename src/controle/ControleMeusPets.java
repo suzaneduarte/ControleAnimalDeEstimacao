@@ -34,7 +34,7 @@ public class ControleMeusPets {
 	 */
 	
 	public void CadastrarPet() {
-		new TelaCadAnimal();
+		new TelaCadAnimal(dados);
 	    janela.dispose();
 	}
 	

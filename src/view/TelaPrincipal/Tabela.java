@@ -46,7 +46,7 @@ public class Tabela implements ListSelectionListener, DocumentListener {
 	}
 	
 	public void ConstruirTabela() {		
-		listaPets.setBounds(18, 57, 150, 150);
+		listaPets.setBounds(59, 57, 150, 150);
 		listaPets.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 		listaPets.setVisibleRowCount(2); //linhas visiveis
 
@@ -57,9 +57,9 @@ public class Tabela implements ListSelectionListener, DocumentListener {
 
 		// Adiciona a lista à janela
 	    JScrollPane scroll = new JScrollPane(listaPets);
-	    scroll.setBounds(10, 49, 250, 350);  
+	    scroll.setBounds(10, 49, 250, 440);  
 
-	    scroll.setVisible(true);	
+	    scroll.setVisible(true);
 		
 		janela.add(scroll);
 		janela.add(rotulo);
