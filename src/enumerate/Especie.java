@@ -1,5 +1,11 @@
 package enumerate;
 
+/**
+ *  Classe Enumerate Especie faz o Enumerate das Especies
+ *  @author Gabriel Evaristo e Suzane Alves
+ *  @since 2023
+ *  @version 1.0
+ */
 
 public enum Especie{
 	CANINO("Canino"), 
