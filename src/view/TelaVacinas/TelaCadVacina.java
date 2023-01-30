@@ -18,6 +18,12 @@ import modelo.Vacina;
 import view.TelaCadastroAnimal.QuadroAnimal;
 import view.TelaVacinas.TelaCadVacina;
 
+/**
+ *  Classe TelaCadVacina chama os demais elementos
+ *  @author Gabriel Evaristo e Suzane Alves
+ *  @since 2023
+ *  @version 1.0
+ */
 
 public class TelaCadVacina implements ActionListener {
 	private static JFrame telacadastrovacina = new JFrame("Cadastre uma vacina!"); 
@@ -49,6 +55,10 @@ public class TelaCadVacina implements ActionListener {
 		Inicializar();
 	}
 	
+	/**
+	 * inicializa
+	 */
+	
 	private void Inicializar() {
 		controle = new ControleVacinas(telacadastrovacina, dados, animal, vacina);
 		telacadastrovacina.setLayout(null);
@@ -68,6 +78,9 @@ public class TelaCadVacina implements ActionListener {
 	public void actionPerformed(ActionEvent ae) {
 
 	}
+	/**
+	 * chama a imagem de fundo
+	 */
 	
 	private void construirImagemDeFundo() {
 		try {

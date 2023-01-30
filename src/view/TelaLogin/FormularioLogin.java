@@ -9,6 +9,14 @@ import javax.swing.*;
 //import javax.imageio.ImageIO;
 //import java.io.IOException;
 
+
+/**
+ *  Classe FormularioLogin cria o formulario do login
+ *  @author Gabriel Evaristo e Suzane Alves
+ *  @since 2023
+ *  @version 1.0
+ */
+
 public class FormularioLogin implements ActionListener {
 	JFrame janela;
 	
@@ -34,10 +42,18 @@ public class FormularioLogin implements ActionListener {
 		return caixaDeTextoSenha.getText();
 	}
 	
+	/**
+	 * constroi os elementos 
+	 */
 	public void construir() {
 		construirCaixaDeTexto(janela);
 		construirCaixaDeTextoDeSenha(janela);
 	}
+	
+	/**
+	 * cx de txt email
+	 * @param janela
+	 */
 	
 	private void construirCaixaDeTexto(JFrame janela) {
 		JLabel email = new JLabel("Seu e-mail:"); //rótulo só com texto
@@ -52,6 +68,10 @@ public class FormularioLogin implements ActionListener {
 		janela.add(email);
 	}
 	
+	/**
+	 * cx de txt senha
+	 * @param janela
+	 */
 	private void construirCaixaDeTextoDeSenha(JFrame janela) {
 		JLabel senha = new JLabel("Sua senha:"); //rótulo só com texto
 		senha.setBounds(bordaX, bordaY + 144, 160, 20);

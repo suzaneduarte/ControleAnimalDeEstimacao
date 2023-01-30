@@ -15,6 +15,13 @@ import java.io.File;
 import javax.imageio.ImageIO;
 import java.io.IOException;
 
+/**
+ *  Classe QuadroCadastro posiciona os elementos na tela
+ *  @author Gabriel Evaristo e Suzane Alves
+ *  @since 2023
+ *  @version 1.0
+ */
+
 public class QuadroCadastro implements ActionListener {
 	private JFrame janela;
 	private int bordaX = 24;
@@ -50,12 +57,20 @@ public class QuadroCadastro implements ActionListener {
 	    }
 	}
 	
+	/**
+	 * chama os elementos
+	 */
+	
 	public void construir() {
 		construirTitulo(janela);
 		construirFormulario(janela);
 		construirBotoes(janela);
 	}
 	
+	/**
+	 * titulo
+	 * @param janela
+	 */
 	private void construirTitulo(JFrame janela) {
 		JLabel titulo = new JLabel("Cadastre-se!");
 		
@@ -65,12 +80,18 @@ public class QuadroCadastro implements ActionListener {
 		
 		janela.add(titulo);
 	}
-	
+	/**
+	 * formulasrio
+	 * @param janela
+	 */
 	private void construirFormulario(JFrame janela) {
 		formularioCadastro = new FormularioCadastro(janela);
 		formularioCadastro.construir();
 	}
-	
+	/**
+	 * botoes
+	 * @param janela
+	 */
 	private void construirBotoes(JFrame janela) {
 		JButton botaoCadastrar = new JButton("Cadastrar");
 		

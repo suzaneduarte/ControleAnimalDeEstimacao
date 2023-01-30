@@ -17,6 +17,13 @@ import javax.swing.text.MaskFormatter;
 
 import enumerate.Sexo;
 
+/**
+ *  Classe FormularioCadastro cria o formulario cadastro
+ *  @author Gabriel Evaristo e Suzane Alves
+ *  @since 2023
+ *  @version 1.0
+ */
+
 	public class FormularioCadastro implements ActionListener {
 		JFrame janela;
 		
@@ -75,6 +82,9 @@ import enumerate.Sexo;
 			return Sexo.valueOf(sexo);
 		}
 		
+		/**
+		 * constroi as caixas do formulario
+		 */
 		public void construir() {
 			construirCaixaDeTextoNome(janela);
 			construirCaixaDeTexto(janela);
@@ -85,6 +95,11 @@ import enumerate.Sexo;
 			construirCaixaDoDataNasc(janela);	
 			construirCaixaDeSexo(janela);
 		}
+		
+		/**
+		 * constroi a caixa de texto do nome
+		 * @param janela
+		 */
 		
 		private void construirCaixaDeTextoNome(JFrame janela) {
 			JLabel nome = new JLabel("Nome:"); //rótulo só com texto
@@ -98,6 +113,10 @@ import enumerate.Sexo;
 			janela.add(caixaDeTextoNome);
 			janela.add(nome);
 		}
+		/**
+		 * constroi a caixa de texto do emmail
+		 * @param janela
+		 */
 		
 		private void construirCaixaDeTexto(JFrame janela) {
 			JLabel email = new JLabel("E-mail:"); //rótulo só com texto
@@ -112,6 +131,11 @@ import enumerate.Sexo;
 			janela.add(email);
 		}
 		
+		/**
+		 * constroi a caixa de texto da senha
+		 * @param janela
+		 */
+		
 		private void construirCaixaDeTextoDeSenha(JFrame janela) {
 			JLabel senha = new JLabel("Sua senha:"); //rótulo só com texto
 			senha.setBounds(bordaX, bordaY + 144, 160, 20);
@@ -124,6 +148,11 @@ import enumerate.Sexo;
 			janela.add(senha);
 		}
 		
+		/**
+		 * constroi a caixa de texto da confirmação da senha
+		 * @param janela
+		 */
+		
 		private void construirCaixaDeTextoDeConfirmarSenha(JFrame janela) {
 			JLabel confirmarsenha = new JLabel("Confirme a senha:"); //rótulo só com texto
 			confirmarsenha.setBounds(bordaX, bordaY + 183, 160, 20);
@@ -135,6 +164,11 @@ import enumerate.Sexo;
 			janela.add(caixaDeTextoConfirmarSenha);
 			janela.add(confirmarsenha);
 		}
+		
+		/**
+		 * constroi a caixa de cpf
+		 * @param janela
+		 */
 		
 		private void construirCaixaDoCpf (JFrame janela) {
 			JLabel cpf = new JLabel ("CPF:"); //rótulo só com texto
@@ -149,6 +183,11 @@ import enumerate.Sexo;
 			
 		}
 		
+		/**
+		 * constroi a caixa do telefone
+		 * @param janela
+		 */
+		
 		private void construirCaixaDoTelefone (JFrame janela) {
 			JLabel telefone = new JLabel ("Telefone:"); //rótulo só com texto
 			telefone.setBounds(bordaX, bordaY + 300, 160, 20);
@@ -162,6 +201,11 @@ import enumerate.Sexo;
 			
 		}
 		
+		/**
+		 * constroi a caixa da data de nascimento
+		 * @param janela
+		 */
+		
 		private void construirCaixaDoDataNasc(JFrame janela) {
 			JLabel datanasc = new JLabel ("Data Nascimento:"); //rótulo só com texto
 			datanasc.setBounds(bordaX, bordaY + 339, 160, 20);
@@ -174,6 +218,11 @@ import enumerate.Sexo;
 			janela.add(digitarDatanasc);		
 		}
 		
+		/**
+		 * constroi a caixa do sexo (3 opçoes)
+		 * @param janela
+		 */
+		
 		private void construirCaixaDeSexo (JFrame janela) {
 			JLabel sexo = new JLabel ("Sexo:"); //rótulo só com texto
 			sexo.setBounds(bordaX, bordaY + 222, 160, 20);
@@ -185,6 +234,10 @@ import enumerate.Sexo;
 			janela.add(sexo);
 			janela.add(caixaSelecionarSexo);
 		}
+		
+		/**
+		 * mostra erro caso digite senha errada
+		 */
 
 		public void mostrarErro() {
 			caixaDeTextoSenha.setBorder(new LineBorder(Color.RED,2));

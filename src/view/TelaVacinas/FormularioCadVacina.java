@@ -20,7 +20,15 @@ import modelo.Vacina;
 
 import javax.swing.JCheckBox;
 
-	public class FormularioCadVacina implements ActionListener {
+
+/**
+ *  Classe FormularioVacina cria o formulario cadastro de Vacina
+ *  @author Gabriel Evaristo e Suzane Alves
+ *  @since 2023
+ *  @version 1.0
+ */
+
+public class FormularioCadVacina implements ActionListener {
 		private JFrame janela;
 		private ControleVacinas controle;
 		
@@ -75,6 +83,9 @@ import javax.swing.JCheckBox;
 			return Intervalo.valueOf(intervalo);
 		}
 
+		/**
+		 * consttroi os elementos
+		 */
 		public void construir() {
 			construirCaixaDoNome(janela);
 			construirCaixaDaData(janela);
@@ -88,7 +99,10 @@ import javax.swing.JCheckBox;
 				preencherCampos(controle.GetVacinaSelecionada());
 			}
 		}
-		
+		/**
+		 * preenche os campos
+		 * @param vacina
+		 */
 		private void preencherCampos(Vacina vacina) {
 			caixaDeTextoNome.setText(vacina.getNomeDaVacina());
 			caixaDeTextoLab.setText(vacina.getLaboratorio());
@@ -99,6 +113,9 @@ import javax.swing.JCheckBox;
 			checkboxRevacina.setSelected(vacina.getRevacina());
 		}
 
+		/**
+		 * nome
+		 */
 		private void construirCaixaDoNome(JFrame janela) {
 			JLabel nome = new JLabel("Nome da vacina:"); 
 			nome.setBounds(bordaX, bordaY + 170, 160, 30);
@@ -111,7 +128,12 @@ import javax.swing.JCheckBox;
 			
 			janela.add(caixaDeTextoNome);
 			janela.add(nome);
+			
 		}
+		/**
+		 * cx do laboratorio
+		 * @param janela
+		 */
 		
 		private void construirCaixaLaboratorio (JFrame janela) {
 			JLabel lab = new JLabel ("Laboratório:");
@@ -125,6 +147,10 @@ import javax.swing.JCheckBox;
 			janela.add(lab);
 			janela.add(caixaDeTextoLab);
 		}
+		/**
+		 * cx da data
+		 * @param janela
+		 */
 		
 		private void construirCaixaDaData(JFrame janela) {
 			JLabel data = new JLabel ("Data:"); 
@@ -138,6 +164,11 @@ import javax.swing.JCheckBox;
 			janela.add(digitarData);
 			
 		}
+		/**
+		 * cx do lote
+		 * @param janela
+		 */
+		
 		
 		private void construirCaixaLote(JFrame janela) {
 			JLabel lote = new JLabel ("Lote:"); //rótulo só com texto
@@ -152,6 +183,10 @@ import javax.swing.JCheckBox;
 		}
 		
 		
+		/**
+		 * cx do checkbox da vacina
+		 * @param janela
+		 */
 		
 		private void construirCheckBoxRevacina(JFrame janela) {
 			JLabel revacina = new JLabel("Necessidade de Revacina?");
@@ -164,6 +199,11 @@ import javax.swing.JCheckBox;
 			janela.add(revacina);
 			janela.add(checkboxRevacina);
 		}
+		/**
+		 * cx da cx do periodo
+		 * @param janela
+		 */
+		
 		
 		private void construirCaixaPeriodo (JFrame janela) {
 			JLabel periodo = new JLabel ("A cada:");
@@ -177,6 +217,11 @@ import javax.swing.JCheckBox;
 			janela.add(periodo);
 			janela.add(caixaDeTextoPer);
 		}
+		/**
+		 * cx do combobox intervalo
+		 * @param janela
+		 */
+		
 		
 		private void construirComboBoxIntervalo(JFrame janela) {
 			JLabel intervalo = new JLabel("Intervalo:");

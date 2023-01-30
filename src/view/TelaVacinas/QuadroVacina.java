@@ -14,6 +14,13 @@ import controle.ControleVacinas;
 //import view.TelaVacina.*;
 //import view.TelaCadVacina
 
+/**
+ *  Classe QuadroVacina posiciona os elementos na tela
+ *  @author Gabriel Evaristo e Suzane Alves
+ *  @since 2023
+ *  @version 1.0
+ */
+
 public class QuadroVacina implements ActionListener {
 	private JFrame janela;
 	private ControleVacinas controle;
@@ -34,11 +41,19 @@ public class QuadroVacina implements ActionListener {
 	    }
 	}
 	
+	/**
+	 * chama os elementos na tela
+	 */
 	public void construir() {
 		construirTitulo(janela);
 		construirFormulario(janela);
 		construirBotoes(janela);
 	}
+	
+	/**
+	 * titulo
+	 * @param janela
+	 */
 	
 	private void construirTitulo(JFrame janela) {
 		JLabel titulo = new JLabel("Cadastre uma vacina!");
@@ -49,12 +64,18 @@ public class QuadroVacina implements ActionListener {
 		
 		janela.add(titulo);
 	}
-	
+	/**
+	 * formulario
+	 * @param janela
+	 */
 	private void construirFormulario(JFrame janela) {
 		formulario = new FormularioCadVacina(janela, controle);
 		formulario.construir();
 	}
-	
+	/**
+	 * botoes
+	 * @param janela
+	 */
 	private void construirBotoes(JFrame janela) {
 		JButton botaoVoltar = new JButton("Voltar");
 		JButton botaoCadastrar = new JButton("Cadastrar");

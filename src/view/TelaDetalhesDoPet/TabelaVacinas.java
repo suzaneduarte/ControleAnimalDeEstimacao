@@ -26,6 +26,13 @@ import modelo.Vacina;
 import view.TelaPrincipal.MeusPets;
 import view.TelaVacinas.TelaCadVacina;
 
+/**
+ *  Classe TelaCadastro chama os demais elementos
+ *  @author Gabriel Evaristo e Suzane Alves
+ *  @since 2023
+ *  @version 1.0
+ */
+
 public class TabelaVacinas implements ActionListener {
 
 	private int bordaX = 24;
@@ -46,11 +53,18 @@ public class TabelaVacinas implements ActionListener {
 		this.janela = janela;
 	}
 	
+	/**
+	 * Constroi os elementos da tabela 
+	 */
 	public void construir() {
 		construirTabela();
 		construirSelecaoDeVacinas();
 		construirBotoes();
 	}
+	
+	/**
+	 * tabela
+	 */
 	
 	private void construirTabela() {
 		List<Object[]> vacinasFormatadas = new ArrayList<Object[]>();
@@ -75,6 +89,10 @@ public class TabelaVacinas implements ActionListener {
 		janela.add(barraRolagem);
 	}
 	
+	/**
+	 * botoes
+	 */
+	
 	private void construirBotoes() {
 		botaoEditar = new JButton("Editar Vacina");
 		botaoDeletar = new JButton("Deletar");
@@ -98,6 +116,10 @@ public class TabelaVacinas implements ActionListener {
 		janela.add(botaoDeletar);
 		janela.add(botaoVoltar);
 	}
+	
+	/**
+	 * vacinas
+	 */
 	
 	private void construirSelecaoDeVacinas () {
 		JLabel titulo = new JLabel("Vacinas: ");
