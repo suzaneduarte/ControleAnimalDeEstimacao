@@ -6,6 +6,12 @@ import javax.swing.*;
 import controle.ControleMeusPets;
 import view.TelaCadastro.*;
 
+/**
+ *  Classe Menu da as opcoes de menu para o usuario
+ *  @author Gabriel Evaristo e Suzane Alves
+ *  @since 2023
+ *  @version 1.0
+ */
 public class Menu implements ActionListener {	
 	private JFrame janela;
 	private ControleMeusPets controle;
@@ -21,6 +27,9 @@ public class Menu implements ActionListener {
 		
 	}
 
+	/**
+	 * constroi os elementos do menu na tela
+	 */
 	
 	public void construir() {
 		JMenuBar barraMenu = new JMenuBar(); 

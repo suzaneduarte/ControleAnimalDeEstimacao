@@ -15,7 +15,15 @@ import controle.ControleLogin;
 import view.TelaLogin.PrimeiraTela;
 import controle.ControleCadastro;
 import modelo.Dados;
-	
+
+
+/**
+ *  Classe TelaCadastro chama os demais elementos
+ *  @author Gabriel Evaristo e Suzane Alves
+ *  @since 2023
+ *  @version 1.0
+ */
+
 	public class TelaCadastro implements ActionListener {
 		private static JFrame telacadastro = new JFrame("Controle de Animais de Estimação"); //cria o contêiner telacadastro
 		private ControleCadastro controle;
@@ -54,6 +62,9 @@ import modelo.Dados;
 		public void actionPerformed(ActionEvent ae) {
 
 		}
+		/**
+		 * chama a imagem de fundo
+		 */
 		
 		private void construirImagemDeFundo() {
 			try {

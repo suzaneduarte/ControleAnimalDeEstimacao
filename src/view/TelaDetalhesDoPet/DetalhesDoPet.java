@@ -12,6 +12,12 @@ import modelo.AnimalDeEstimacao;
 import modelo.Dados;
 import modelo.Raca;
 
+/**
+ *  Classe Detalhe dos pets mostra os detalhes do pet
+ *  @author Gabriel Evaristo e Suzane Alves
+ *  @since 2023
+ *  @version 1.0
+ */
 public class DetalhesDoPet {
 
 	private int bordaX = 24;
@@ -28,6 +34,9 @@ public class DetalhesDoPet {
 		this.janela = janela;
 	}
 	
+	/**
+	 * constroi os elementos do pets
+	 */
 	public void construir() {
 //		Especie especie, Raca raca, String nome, String nascimento, Sexo sexo
 		construirNome();
@@ -37,6 +46,9 @@ public class DetalhesDoPet {
 		construirRaca();
 	}
 	
+	/**
+	 * nome
+	 */
 	private void construirNome() {
 		JLabel nome = new JLabel("Nome: " + animal.getNome()); //rótulo só com texto
 		nome.setBounds(bordaX, bordaY, 160, 30);
@@ -44,6 +56,9 @@ public class DetalhesDoPet {
 		
 		janela.add(nome);
 	}
+	/**
+	 * sexo
+	 */
 	
 	private void construirSexo() {
 		JLabel sexo = new JLabel("Sexo: " + animal.getSexo()); //rótulo só com texto
@@ -52,6 +67,9 @@ public class DetalhesDoPet {
 		
 		janela.add(sexo);
 	}
+	/**
+	 * datadenascimento
+	 */
 	
 	private void construirNascimento() {
 		JLabel nascimento = new JLabel("Data de nascimento: " + animal.getNascimento()); //rótulo só com texto
@@ -60,7 +78,9 @@ public class DetalhesDoPet {
 		
 		janela.add(nascimento);
 	}
-	
+	/**
+	 * especie
+	 */
 	private void construirEspecie() {
 		JLabel especie = new JLabel("Especie: " + animal.getEspecie()); //rótulo só com texto
 		especie.setBounds(bordaX, bordaY + 138, 300, 30);
@@ -68,6 +88,9 @@ public class DetalhesDoPet {
 		
 		janela.add(especie);
 	}
+	/**
+	 * raca
+	 */
 	
 	private void construirRaca() {
 		JLabel raca = new JLabel("Raca: " + animal.getRaca().getTipoDeRaca()); //rótulo só com texto

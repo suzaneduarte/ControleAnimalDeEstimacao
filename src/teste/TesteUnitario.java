@@ -16,8 +16,12 @@ import controle.ControleCadastro;
 
 public class TesteUnitario {
 
+		
 		@Test
 		
+		/**
+		 * teste do cpf
+		 */
 		void testeCpf() {
 			String valorCPFErrado = "123.456.789-00";
 			String valorCPFCorreto = "12345678900";
@@ -28,6 +32,9 @@ public class TesteUnitario {
 		
 		@Test
 				
+		/**
+		 * teste do telefone
+		 */
 		void testeTelefone() {
 			String valorTelErrado = "(61) 9 9999-9999";
 			String valorTelCorreto = "61999999999";
@@ -37,7 +44,10 @@ public class TesteUnitario {
 		}
 		
 		@Test
-				
+		
+		/**
+		 * teste do nome
+		 */
 		void testeNome () {
 			String nomeNomeErrado = "ABC999";
 			String nomeNomeCorreto = "ABCDEFG";

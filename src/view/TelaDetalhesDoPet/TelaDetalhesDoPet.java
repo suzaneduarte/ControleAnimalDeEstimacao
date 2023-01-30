@@ -16,6 +16,13 @@ import controle.ControleMeusPets;
 import modelo.AnimalDeEstimacao;
 import modelo.Dados;
 
+/**
+ *  Classe TelaDetalhesDoPet exibe os detalhes dos pets e suas vacinas cadastradas
+ *  @author Gabriel Evaristo e Suzane Alves
+ *  @since 2023
+ *  @version 1.0
+ */
+
 public class TelaDetalhesDoPet {
 	private static JFrame janela;
 	private Dados dados;

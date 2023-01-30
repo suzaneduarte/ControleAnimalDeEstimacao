@@ -13,6 +13,12 @@ import view.TelaPrincipal.MeusPets;
 
 import controle.ControleCadastroPet;
 
+/**
+ *  Classe QuadroAnimal posiciona os elementos na tela
+ *  @author Gabriel Evaristo e Suzane Alves
+ *  @since 2023
+ *  @version 1.0
+ */
 public class QuadroAnimal implements ActionListener {
 	private JFrame janela;
 	private ControleCadastroPet controle;
@@ -33,13 +39,19 @@ public class QuadroAnimal implements ActionListener {
 	    	controle.Cadastrar(formularioAnimal.getEspecie(), formularioAnimal.getRaca(), formularioAnimal.getNome(), formularioAnimal.getDataNasc(), formularioAnimal.getSexo() );
 	    }
 	}
-	
+	 /**
+	  * chama os elementos na tela
+	  */
 	public void construir() {
 		construirTitulo(janela);
 		construirFormulario(janela);
 		construirBotoes(janela);
 	}
 	
+	/**
+	 * titulo
+	 * @param janela
+	 */
 	private void construirTitulo(JFrame janela) {
 		JLabel titulo = new JLabel("Cadastre seu Pet!");
 		
@@ -49,12 +61,19 @@ public class QuadroAnimal implements ActionListener {
 		
 		janela.add(titulo);
 	}
-	
+	/**
+	 * formulario
+	 * @param janela
+	 */
 	private void construirFormulario(JFrame janela) {
 		formularioAnimal = new FormularioCadAnimal(janela, controle);
 		formularioAnimal.construir();
 	}
 	
+	/**
+	 * botoes
+	 * @param janela
+	 */
 	private void construirBotoes(JFrame janela) {
 		JButton botaoVoltar = new JButton("Voltar");
 		JButton botaoCadastrar = new JButton("Cadastrar");

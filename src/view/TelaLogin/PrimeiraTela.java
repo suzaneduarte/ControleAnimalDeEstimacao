@@ -15,6 +15,12 @@ import java.io.IOException;
 import controle.ControleLogin;
 import modelo.Dados;
 
+/**
+ *  Classe PrimeiraTela chama os demais elementos
+ *  @author Gabriel Evaristo e Suzane Alves
+ *  @since 2023
+ *  @version 1.0
+ */
 public class PrimeiraTela implements ActionListener {
 	private static JFrame janelainicial = new JFrame("Controle de Animais de Estimação"); //cria o contêiner janelainicial
 	private Dados dados;
@@ -29,7 +35,9 @@ public class PrimeiraTela implements ActionListener {
 		this.dados = new Dados();
 		Inicializar();
 	}
-	
+	/**
+	 * inicializa
+	 */
 	private void Inicializar() {
 		controle = new ControleLogin(janelainicial, dados);
 		janelainicial.setLayout(null);
@@ -53,7 +61,9 @@ public class PrimeiraTela implements ActionListener {
 	public void actionPerformed(ActionEvent ae) {
 		
 	}
-	
+	/**
+	 * chama a imagem de fundo
+	 */
 	private void construirImagemDeFundo() {
 		try {
 			BufferedImage image = ImageIO.read(getClass().getResource("/imagens/primeiratela.jpg"));

@@ -13,6 +13,13 @@ import view.TelaPrincipal.MeusPets;
 //import javax.imageio.ImageIO;
 //import java.io.IOException;
 
+/**
+ *  Classe QuadroLogin posiciona os elementos na tela
+ *  @author Gabriel Evaristo e Suzane Alves
+ *  @since 2023
+ *  @version 1.0
+ */
+
 public class QuadroLogin implements ActionListener {
 	private JFrame janela;
 	private ControleLogin controle;
@@ -34,12 +41,20 @@ public class QuadroLogin implements ActionListener {
 	    }
 	}
 	
+	/**
+	 * chama os elementos na tela
+	 */
+	
 	public void construir() {
 		construirTitulo(janela);
 		construirFormulario(janela);
 		construirBotoes(janela);
 	}
-	
+	 
+	/**
+	 * titulo
+	 * @param janela
+	 */
 	private void construirTitulo(JFrame janela) {
 		JLabel titulo = new JLabel("Olá! Faça seu Login");
 		
@@ -49,12 +64,19 @@ public class QuadroLogin implements ActionListener {
 		
 		janela.add(titulo);
 	}
+	/**
+	 * formulario
+	 * @param janela
+	 */
 	
 	private void construirFormulario(JFrame janela) {
 		formularioLogin = new FormularioLogin(janela);
 		formularioLogin.construir();
 	}
-	
+	/**
+	 * botoes
+	 * @param janela
+	 */
 	private void construirBotoes(JFrame janela) {
 		JButton botaoEntrar = new JButton("Entrar");
 		JButton botaoCadastrar = new JButton("Cadastrar");

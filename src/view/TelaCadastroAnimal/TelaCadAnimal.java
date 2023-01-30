@@ -17,6 +17,13 @@ import controle.ControleCadastroPet;
 import modelo.AnimalDeEstimacao;
 import modelo.Dados;
 
+/**
+ *  Classe TelaCadAnimal chama os demais elementos
+ *  @author Gabriel Evaristo e Suzane Alves
+ *  @since 2023
+ *  @version 1.0
+ */
+
 public class TelaCadAnimal implements ActionListener {
 	private static JFrame telacadastroanimal = new JFrame("Cadastrar Animal de Estimação"); 
 	private ControleCadastroPet controle;
@@ -39,6 +46,9 @@ public class TelaCadAnimal implements ActionListener {
 		Inicializar();
 	}
 
+	/**
+	 * inicializa
+	 */
 	private void Inicializar() {
 		controle = new ControleCadastroPet(telacadastroanimal, dados, animal);
 		telacadastroanimal.setLayout(null);
@@ -58,6 +68,9 @@ public class TelaCadAnimal implements ActionListener {
 	public void actionPerformed(ActionEvent ae) {
 
 	}
+	/**
+	 * chama a imagem de fundo
+	 */
 	
 	private void construirImagemDeFundo() {
 		try {

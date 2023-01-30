@@ -20,6 +20,12 @@ import enumerate.Sexo;
 import modelo.AnimalDeEstimacao;
 import modelo.Raca;
 
+/**
+ *  Classe FormularioCadastroAnimal cria o formulario cadastro de animal
+ *  @author Gabriel Evaristo e Suzane Alves
+ *  @since 2023
+ *  @version 1.0
+ */
 	public class FormularioCadAnimal implements ActionListener {
 		private JFrame janela;
 		private ControleCadastroPet controle;
@@ -45,6 +51,10 @@ import modelo.Raca;
 			
 		}
 		
+		/**
+		 * constroi os elementos
+		 */
+		
 		public void construir() {
 			construirCaixaDoNome(janela);
 			construirCaixaDeSexo(janela);
@@ -59,6 +69,11 @@ import modelo.Raca;
 				preencherCampos(controle.getAnimalSelecionado());
 			}
 		}
+		
+		/**
+		 * preenche os campos
+		 * @param animal
+		 */
 		
 		private void preencherCampos(AnimalDeEstimacao animal) {
 			caixaDeTextoNome.setText(animal.getNome());
@@ -99,6 +114,11 @@ import modelo.Raca;
 			return this.digitarDatanasc.getText();
 		}
 		
+		/**
+		 * caixa de nome
+		 * @param janela
+		 */
+		
 		private void construirCaixaDoNome(JFrame janela) {
 			JLabel nome = new JLabel("Nome:"); 
 			nome.setBounds(bordaX, bordaY + 150, 170, 30);
@@ -112,7 +132,9 @@ import modelo.Raca;
 			janela.add(caixaDeTextoNome);
 			janela.add(nome);
 		}
-		
+		/*
+		 * caixa de sexo
+		 */
 		
 		private void construirCaixaDeSexo (JFrame janela) {
 			JLabel sexo = new JLabel ("Sexo:");
@@ -126,6 +148,11 @@ import modelo.Raca;
 			janela.add(caixaSelecionarSexo);
 		}
 		
+		/**
+		 * caixa de raca
+		 * @param janela
+		 */
+		
 		private void construirCaixaDaRaca(JFrame janela) {
 			JLabel raca = new JLabel ("Tipo de raça:"); 
 			raca.setBounds(bordaX, bordaY + 222, 170, 20);
@@ -138,6 +165,10 @@ import modelo.Raca;
 			janela.add(digitarRaca);
 			
 		}
+		/**
+		 * cx de pelagem
+		 * @param janela
+		 */
 		
 		private void construirCaixaDaPelagem(JFrame janela) {
 			JLabel pelagem = new JLabel ("Pelagem da raça:"); 
@@ -151,6 +182,11 @@ import modelo.Raca;
 			janela.add(digitarPelagem);
 		}
 		
+		/**
+		 * cx do tamanho da pelagem
+		 * @param janela
+		 */
+		
 		private void construirCaixaDoTamanhoDaPelagem(JFrame janela) {
 			JLabel pelagem = new JLabel ("Tamanho da pelagem:"); 
 			pelagem.setBounds(bordaX, bordaY + 294, 180, 20);
@@ -163,6 +199,10 @@ import modelo.Raca;
 			janela.add(pelagem);
 			janela.add(caixaSelecionarTamanhoDaPelagem);
 		}
+		/**
+		 * cx do temperamento
+		 * @param janela
+		 */
 		
 		private void construirCaixaDoTemperamento(JFrame janela) {
 			JLabel temperamento = new JLabel ("Temperamento da raça:"); 
@@ -176,6 +216,11 @@ import modelo.Raca;
 			janela.add(digitarTemperamento);
 		}
 		
+		/**
+		 * cx da especie
+		 * @param janela
+		 */
+		
 		private void construirCaixaDaEspecie(JFrame janela) {
 			JLabel especie = new JLabel ("Especie:");
 			especie.setBounds(bordaX, bordaY + 366, 170, 20);
@@ -188,6 +233,10 @@ import modelo.Raca;
 			janela.add(comboboxEspecie);
 			janela.add(especie);	
 		}
+		/**
+		 * cx da data de nascimento
+		 * @param janela
+		 */
 		
 		private void construirCaixaDoDataNasc(JFrame janela) {
 			JLabel datanasc = new JLabel ("Data Nascimento:"); //rótulo só com texto
