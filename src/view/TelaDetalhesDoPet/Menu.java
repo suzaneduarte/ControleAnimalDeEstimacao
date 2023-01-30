@@ -28,16 +28,16 @@ public class Menu implements ActionListener {
 		JMenuBar barraMenu = new JMenuBar(); 
 		
 	    // Define e adiciona três menus drop down na barra de menus:
-		JMenu acoesMenu = new JMenu("Ações");
+		JMenu acoesMenu = new JMenu("Ações com esse Pet");
 		
 
-	    JMenuItem editar = new JMenuItem(new AbstractAction("Editar") {
+	    JMenuItem editar = new JMenuItem(new AbstractAction("Editar esse Pet") {
 	        public void actionPerformed(ActionEvent ae) {
 	            controle.editarAnimal();
 	        }
 	    });
 	    
-	    JMenuItem deletar = new JMenuItem(new AbstractAction("Deletar") {
+	    JMenuItem deletar = new JMenuItem(new AbstractAction("Deletar esse Pet") {
 	        public void actionPerformed(ActionEvent ae) {
 	        	controle.deletarAnimal();
 	        }

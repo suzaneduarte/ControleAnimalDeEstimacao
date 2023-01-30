@@ -16,6 +16,13 @@ import controle.ControleMeusPets;
 import modelo.AnimalDeEstimacao;
 import modelo.Dados;
 
+/**
+ *  Essa é a Tela de detalhamento de cada um dos pets da lista de animais de estimação do usuário.
+ *  @author Gabriel Evaristo e Suzane Alves
+ *  @since 2023
+ *  @version 1.0
+ */
+
 public class TelaDetalhesDoPet {
 	private static JFrame janela;
 	private Dados dados;
@@ -25,12 +32,20 @@ public class TelaDetalhesDoPet {
 	private int bordaX = 24;
 	private int bordaY = 24;
 
+	/**
+	 * Utiliza animal e os dados como parâmetros, uma vez que segue o caminho usual. Além disso, chama o método Inicializar. 
+	 */
+	
 	public TelaDetalhesDoPet(AnimalDeEstimacao animal, Dados dados) {
 		this.animal = animal;
 		this.dados = dados;
 		Inicializar();
 	}
 
+	/**
+	 * Caso não venha da navegação usual/correta, esse método é utilizado conforme é visualizado na main. 
+	 */
+	
 	public TelaDetalhesDoPet() {
 		this.dados = new Dados();
 		this.animal = dados.getAnimaisDeUsuario().get(0);
@@ -47,11 +62,23 @@ public class TelaDetalhesDoPet {
 		janela.setLocationRelativeTo(null);
 		this.construir();
 		
+		/**
+		 * Traz todas as informações detalhadas em relação ao determinado animal de estimação detalhado
+		 */
+		
 		DetalhesDoPet detalhesDoPet = new DetalhesDoPet(animal, controle, janela);
 		detalhesDoPet.construir();
 		
+		/**
+		 * Cria a tabela de vacinas do animal selecionado
+		 */
+		
 		TabelaVacinas tabelaVacina = new TabelaVacinas(animal, controle, janela);
 		tabelaVacina.construir();
+
+		/**
+		 * Cria o menu na parte superior da tela para que seja possível realizar as ações de editar o animal ou deletar o animal. 
+		 */
 		
 		Menu menu = new Menu(janela, controle, animal);
 		menu.construir();
