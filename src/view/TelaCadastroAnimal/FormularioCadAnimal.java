@@ -27,7 +27,7 @@ import modelo.Raca;
 		private int bordaX = 50;
 		private int bordaY = 24;
 		private JTextField caixaDeTextoNome;
-		private JTextField digitarRaça;
+		private JTextField digitarRaca;
 		private JTextField digitarPelagem;
 		private JTextField digitarDatanasc;
 		private JTextField digitarTemperamento;
@@ -62,7 +62,7 @@ import modelo.Raca;
 		
 		private void preencherCampos(AnimalDeEstimacao animal) {
 			caixaDeTextoNome.setText(animal.getNome());
-			digitarRaça.setText(animal.getRaca().getTipoDeRaca());
+			digitarRaca.setText(animal.getRaca().getTipoDeRaca());
 			digitarPelagem.setText(animal.getRaca().getPelagem());
 			digitarDatanasc.setText(animal.getNascimento());
 			digitarTemperamento.setText(animal.getRaca().getTemperamento());
@@ -82,7 +82,7 @@ import modelo.Raca;
 		
 		public Raca getRaca() {
 			Raca raca = new Raca(
-						this.digitarRaça.getText(),
+						this.digitarRaca.getText(),
 						this.digitarPelagem.getText(),
 						this.caixaSelecionarTamanhoDaPelagem.getSelectedIndex() == 0,
 						this.digitarTemperamento.getText()
@@ -127,15 +127,15 @@ import modelo.Raca;
 		}
 		
 		private void construirCaixaDaRaca(JFrame janela) {
-			JLabel raça = new JLabel ("Tipo de raça:"); 
-			raça.setBounds(bordaX, bordaY + 222, 170, 20);
-			raça.setFont(new Font("Arial", Font.BOLD, 14));
+			JLabel raca = new JLabel ("Tipo de raça:"); 
+			raca.setBounds(bordaX, bordaY + 222, 170, 20);
+			raca.setFont(new Font("Arial", Font.BOLD, 14));
 			
-			digitarRaça = new JTextField(11);
-			digitarRaça.setBounds(bordaX + 192, bordaY + 222, 180, 20);
+			digitarRaca = new JTextField(11);
+			digitarRaca.setBounds(bordaX + 192, bordaY + 222, 180, 20);
 			
-			janela.add(raça);
-			janela.add(digitarRaça);
+			janela.add(raca);
+			janela.add(digitarRaca);
 			
 		}
 		
